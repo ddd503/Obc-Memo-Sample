@@ -86,18 +86,15 @@
 		4570CB7F24114439005C6AEA /* Obc-Memo-Sample */ = {
 			isa = PBXGroup;
 			children = (
-				4570CB8024114439005C6AEA /* AppDelegate.h */,
-				4570CB8124114439005C6AEA /* AppDelegate.m */,
-				4570CB8324114439005C6AEA /* SceneDelegate.h */,
-				4570CB8424114439005C6AEA /* SceneDelegate.m */,
+				4570CBB224114CA7005C6AEA /* Presentation */,
+				4570CBB124114CA4005C6AEA /* Domain */,
+				4570CBB024114C64005C6AEA /* Data */,
+				4570CBAC24114BF2005C6AEA /* Util */,
+				4570CBAB24114BF0005C6AEA /* Startup */,
+				4570CBAA24114BED005C6AEA /* Other */,
 				4570CB8624114439005C6AEA /* ViewController.h */,
 				4570CB8724114439005C6AEA /* ViewController.m */,
 				4570CB8924114439005C6AEA /* Main.storyboard */,
-				4570CB8F2411443C005C6AEA /* Assets.xcassets */,
-				4570CB912411443C005C6AEA /* LaunchScreen.storyboard */,
-				4570CB942411443C005C6AEA /* Info.plist */,
-				4570CB952411443C005C6AEA /* main.m */,
-				4570CB8C24114439005C6AEA /* Obc_Memo_Sample.xcdatamodeld */,
 			);
 			path = "Obc-Memo-Sample";
 			sourceTree = "<group>";
@@ -109,6 +106,145 @@
 				4570CBA12411443C005C6AEA /* Info.plist */,
 			);
 			path = "Obc-Memo-SampleTests";
+			sourceTree = "<group>";
+		};
+		4570CBAA24114BED005C6AEA /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				4570CB8F2411443C005C6AEA /* Assets.xcassets */,
+				4570CB942411443C005C6AEA /* Info.plist */,
+				4570CB952411443C005C6AEA /* main.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		4570CBAB24114BF0005C6AEA /* Startup */ = {
+			isa = PBXGroup;
+			children = (
+				4570CB8024114439005C6AEA /* AppDelegate.h */,
+				4570CB8124114439005C6AEA /* AppDelegate.m */,
+				4570CB8324114439005C6AEA /* SceneDelegate.h */,
+				4570CB8424114439005C6AEA /* SceneDelegate.m */,
+				4570CB912411443C005C6AEA /* LaunchScreen.storyboard */,
+			);
+			path = Startup;
+			sourceTree = "<group>";
+		};
+		4570CBAC24114BF2005C6AEA /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				4570CBBE24114DF5005C6AEA /* DI */,
+				4570CBBD24114DF3005C6AEA /* Extension */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		4570CBAD24114BF5005C6AEA /* ValueObject */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ValueObject;
+			sourceTree = "<group>";
+		};
+		4570CBAE24114BF7005C6AEA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4570CBAF24114BFA005C6AEA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4570CBB024114C64005C6AEA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4570CBB824114CDB005C6AEA /* Repository */,
+				4570CBB724114CD8005C6AEA /* DataStore */,
+				4570CBB624114CD6005C6AEA /* Entity */,
+				4570CBB524114CCB005C6AEA /* Error */,
+				4570CBB424114CC9005C6AEA /* Config */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		4570CBB124114CA4005C6AEA /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				4570CBB924114D27005C6AEA /* Translater */,
+				4570CBAD24114BF5005C6AEA /* ValueObject */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		4570CBB224114CA7005C6AEA /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4570CBAF24114BFA005C6AEA /* View */,
+				4570CBAE24114BF7005C6AEA /* Presenter */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		4570CBB424114CC9005C6AEA /* Config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		4570CBB524114CCB005C6AEA /* Error */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		4570CBB624114CD6005C6AEA /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				4570CB8C24114439005C6AEA /* Obc_Memo_Sample.xcdatamodeld */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		4570CBB724114CD8005C6AEA /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
+		4570CBB824114CDB005C6AEA /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		4570CBB924114D27005C6AEA /* Translater */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Translater;
+			sourceTree = "<group>";
+		};
+		4570CBBD24114DF3005C6AEA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		4570CBBE24114DF5005C6AEA /* DI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,7 +509,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LVR5UQEHBD;
-				INFOPLIST_FILE = "Obc-Memo-Sample/Info.plist";
+				INFOPLIST_FILE = "Obc-Memo-Sample/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -391,7 +527,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LVR5UQEHBD;
-				INFOPLIST_FILE = "Obc-Memo-Sample/Info.plist";
+				INFOPLIST_FILE = "Obc-Memo-Sample/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
