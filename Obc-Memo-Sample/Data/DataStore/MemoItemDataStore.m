@@ -99,4 +99,10 @@
     return nil;
 }
 
++ (void)saveAtContext:(NSManagedObjectContext * _Nonnull)context {
+    if (context.hasChanges) {
+        [context save:nil];
+    }
+}
+
 @end

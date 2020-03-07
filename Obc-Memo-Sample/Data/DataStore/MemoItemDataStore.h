@@ -15,6 +15,7 @@
     completion:(void (^ _Nonnull) (MemoItem * _Nullable memoItem,
                                    CoreDataError * _Nullable error))completion;
 + (nullable CoreDataError *)save:(NSManagedObject * _Nonnull)object;
++ (void)saveAtContext:(NSManagedObjectContext * _Nonnull)context;
 + (void)fetchArray:(NSArray<NSPredicate * > * _Nonnull)predicates
            sortKey:(NSString * _Nonnull)sortKey
          ascending:(BOOL * _Nonnull)ascending
