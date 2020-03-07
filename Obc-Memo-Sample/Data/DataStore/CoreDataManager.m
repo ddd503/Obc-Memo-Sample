@@ -41,7 +41,8 @@
     @synchronized (self) {
         if (_persistentContainer == nil) {
             _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"Obc_Memo_Sample"];
-            [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *storeDescription, NSError *error) {
+            [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *storeDescription,
+                                                                              NSError *error) {
                 if (error != nil) {
                     NSLog(@"Unresolved error %@, %@", error, error.userInfo);
                     abort();

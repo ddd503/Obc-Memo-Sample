@@ -19,6 +19,8 @@
 		4570CBC32413718D005C6AEA /* MemoItem+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CBC12413718D005C6AEA /* MemoItem+CoreDataClass.m */; };
 		4570CBC42413718D005C6AEA /* MemoItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CBC22413718D005C6AEA /* MemoItem+CoreDataProperties.m */; };
 		4570CBC6241372B6005C6AEA /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CBC5241372B6005C6AEA /* CoreDataManager.m */; };
+		4570CBCA2413B45F005C6AEA /* MemoItemDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CBC92413B45F005C6AEA /* MemoItemDataStore.m */; };
+		4570CBCD2413E38F005C6AEA /* CoreDataError.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CBCC2413E38F005C6AEA /* CoreDataError.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,10 @@
 		4570CBC22413718D005C6AEA /* MemoItem+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MemoItem+CoreDataProperties.m"; sourceTree = "<group>"; };
 		4570CBC5241372B6005C6AEA /* CoreDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		4570CBC7241372CA005C6AEA /* CoreDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		4570CBC82413B404005C6AEA /* MemoItemDataStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoItemDataStore.h; sourceTree = "<group>"; };
+		4570CBC92413B45F005C6AEA /* MemoItemDataStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoItemDataStore.m; sourceTree = "<group>"; };
+		4570CBCB2413E348005C6AEA /* CoreDataError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataError.h; sourceTree = "<group>"; };
+		4570CBCC2413E38F005C6AEA /* CoreDataError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataError.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +215,8 @@
 		4570CBB524114CCB005C6AEA /* Error */ = {
 			isa = PBXGroup;
 			children = (
+				4570CBCB2413E348005C6AEA /* CoreDataError.h */,
+				4570CBCC2413E38F005C6AEA /* CoreDataError.m */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -230,6 +238,8 @@
 			children = (
 				4570CBC5241372B6005C6AEA /* CoreDataManager.m */,
 				4570CBC7241372CA005C6AEA /* CoreDataManager.h */,
+				4570CBC82413B404005C6AEA /* MemoItemDataStore.h */,
+				4570CBC92413B45F005C6AEA /* MemoItemDataStore.m */,
 			);
 			path = DataStore;
 			sourceTree = "<group>";
@@ -363,12 +373,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4570CBC42413718D005C6AEA /* MemoItem+CoreDataProperties.m in Sources */,
+				4570CBCD2413E38F005C6AEA /* CoreDataError.m in Sources */,
 				4570CB962411443C005C6AEA /* main.m in Sources */,
 				4570CBC6241372B6005C6AEA /* CoreDataManager.m in Sources */,
 				4570CB8824114439005C6AEA /* ViewController.m in Sources */,
 				4570CBC32413718D005C6AEA /* MemoItem+CoreDataClass.m in Sources */,
 				4570CB8224114439005C6AEA /* AppDelegate.m in Sources */,
 				4570CB8E24114439005C6AEA /* Obc_Memo_Sample.xcdatamodeld in Sources */,
+				4570CBCA2413B45F005C6AEA /* MemoItemDataStore.m in Sources */,
 				4570CB8524114439005C6AEA /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
