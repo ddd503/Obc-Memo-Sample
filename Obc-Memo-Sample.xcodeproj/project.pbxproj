@@ -16,6 +16,8 @@
 		4570CB932411443C005C6AEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4570CB912411443C005C6AEA /* LaunchScreen.storyboard */; };
 		4570CB962411443C005C6AEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CB952411443C005C6AEA /* main.m */; };
 		4570CBA02411443C005C6AEA /* Obc_Memo_SampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CB9F2411443C005C6AEA /* Obc_Memo_SampleTests.m */; };
+		4570CBC32413718D005C6AEA /* MemoItem+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CBC12413718D005C6AEA /* MemoItem+CoreDataClass.m */; };
+		4570CBC42413718D005C6AEA /* MemoItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CBC22413718D005C6AEA /* MemoItem+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,10 @@
 		4570CB9B2411443C005C6AEA /* Obc-Memo-SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Obc-Memo-SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4570CB9F2411443C005C6AEA /* Obc_Memo_SampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Obc_Memo_SampleTests.m; sourceTree = "<group>"; };
 		4570CBA12411443C005C6AEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4570CBBF2413718D005C6AEA /* MemoItem+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MemoItem+CoreDataProperties.h"; sourceTree = "<group>"; };
+		4570CBC02413718D005C6AEA /* MemoItem+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MemoItem+CoreDataClass.h"; sourceTree = "<group>"; };
+		4570CBC12413718D005C6AEA /* MemoItem+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MemoItem+CoreDataClass.m"; sourceTree = "<group>"; };
+		4570CBC22413718D005C6AEA /* MemoItem+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MemoItem+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +213,10 @@
 		4570CBB624114CD6005C6AEA /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				4570CBBF2413718D005C6AEA /* MemoItem+CoreDataProperties.h */,
+				4570CBC02413718D005C6AEA /* MemoItem+CoreDataClass.h */,
+				4570CBC12413718D005C6AEA /* MemoItem+CoreDataClass.m */,
+				4570CBC22413718D005C6AEA /* MemoItem+CoreDataProperties.m */,
 				4570CB8C24114439005C6AEA /* Obc_Memo_Sample.xcdatamodeld */,
 			);
 			path = Entity;
@@ -347,8 +357,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4570CBC42413718D005C6AEA /* MemoItem+CoreDataProperties.m in Sources */,
 				4570CB962411443C005C6AEA /* main.m in Sources */,
 				4570CB8824114439005C6AEA /* ViewController.m in Sources */,
+				4570CBC32413718D005C6AEA /* MemoItem+CoreDataClass.m in Sources */,
 				4570CB8224114439005C6AEA /* AppDelegate.m in Sources */,
 				4570CB8E24114439005C6AEA /* Obc_Memo_Sample.xcdatamodeld in Sources */,
 				4570CB8524114439005C6AEA /* SceneDelegate.m in Sources */,
