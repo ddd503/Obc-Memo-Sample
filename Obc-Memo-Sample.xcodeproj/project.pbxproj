@@ -18,6 +18,7 @@
 		4570CBA02411443C005C6AEA /* Obc_Memo_SampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CB9F2411443C005C6AEA /* Obc_Memo_SampleTests.m */; };
 		4570CBC32413718D005C6AEA /* MemoItem+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CBC12413718D005C6AEA /* MemoItem+CoreDataClass.m */; };
 		4570CBC42413718D005C6AEA /* MemoItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CBC22413718D005C6AEA /* MemoItem+CoreDataProperties.m */; };
+		4570CBC6241372B6005C6AEA /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CBC5241372B6005C6AEA /* CoreDataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		4570CBC02413718D005C6AEA /* MemoItem+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MemoItem+CoreDataClass.h"; sourceTree = "<group>"; };
 		4570CBC12413718D005C6AEA /* MemoItem+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MemoItem+CoreDataClass.m"; sourceTree = "<group>"; };
 		4570CBC22413718D005C6AEA /* MemoItem+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MemoItem+CoreDataProperties.m"; sourceTree = "<group>"; };
+		4570CBC5241372B6005C6AEA /* CoreDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		4570CBC7241372CA005C6AEA /* CoreDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +228,8 @@
 		4570CBB724114CD8005C6AEA /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
+				4570CBC5241372B6005C6AEA /* CoreDataManager.m */,
+				4570CBC7241372CA005C6AEA /* CoreDataManager.h */,
 			);
 			path = DataStore;
 			sourceTree = "<group>";
@@ -359,6 +364,7 @@
 			files = (
 				4570CBC42413718D005C6AEA /* MemoItem+CoreDataProperties.m in Sources */,
 				4570CB962411443C005C6AEA /* main.m in Sources */,
+				4570CBC6241372B6005C6AEA /* CoreDataManager.m in Sources */,
 				4570CB8824114439005C6AEA /* ViewController.m in Sources */,
 				4570CBC32413718D005C6AEA /* MemoItem+CoreDataClass.m in Sources */,
 				4570CB8224114439005C6AEA /* AppDelegate.m in Sources */,
