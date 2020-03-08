@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		452C615924142F190032C7F4 /* MemoItemDataStoreTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 452C615824142F190032C7F4 /* MemoItemDataStoreTest.m */; };
 		4570CB8224114439005C6AEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CB8124114439005C6AEA /* AppDelegate.m */; };
 		4570CB8824114439005C6AEA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CB8724114439005C6AEA /* ViewController.m */; };
 		4570CB8B24114439005C6AEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4570CB8924114439005C6AEA /* Main.storyboard */; };
@@ -14,7 +15,6 @@
 		4570CB902411443C005C6AEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4570CB8F2411443C005C6AEA /* Assets.xcassets */; };
 		4570CB932411443C005C6AEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4570CB912411443C005C6AEA /* LaunchScreen.storyboard */; };
 		4570CB962411443C005C6AEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CB952411443C005C6AEA /* main.m */; };
-		4570CBA02411443C005C6AEA /* Obc_Memo_SampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CB9F2411443C005C6AEA /* Obc_Memo_SampleTests.m */; };
 		4570CBC32413718D005C6AEA /* MemoItem+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CBC12413718D005C6AEA /* MemoItem+CoreDataClass.m */; };
 		4570CBC42413718D005C6AEA /* MemoItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CBC22413718D005C6AEA /* MemoItem+CoreDataProperties.m */; };
 		4570CBC6241372B6005C6AEA /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CBC5241372B6005C6AEA /* CoreDataManager.m */; };
@@ -32,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		452C615824142F190032C7F4 /* MemoItemDataStoreTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoItemDataStoreTest.m; sourceTree = "<group>"; };
 		4570CB7D24114439005C6AEA /* Obc-Memo-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Obc-Memo-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4570CB8024114439005C6AEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4570CB8124114439005C6AEA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -44,7 +45,6 @@
 		4570CB942411443C005C6AEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4570CB952411443C005C6AEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4570CB9B2411443C005C6AEA /* Obc-Memo-SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Obc-Memo-SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4570CB9F2411443C005C6AEA /* Obc_Memo_SampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Obc_Memo_SampleTests.m; sourceTree = "<group>"; };
 		4570CBA12411443C005C6AEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4570CBBF2413718D005C6AEA /* MemoItem+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MemoItem+CoreDataProperties.h"; sourceTree = "<group>"; };
 		4570CBC02413718D005C6AEA /* MemoItem+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MemoItem+CoreDataClass.h"; sourceTree = "<group>"; };
@@ -75,6 +75,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		452C615524142EC90032C7F4 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		452C615624142ECC0032C7F4 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				452C615824142F190032C7F4 /* MemoItemDataStoreTest.m */,
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
+		452C615724142ECF0032C7F4 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		4570CB7424114439005C6AEA = {
 			isa = PBXGroup;
 			children = (
@@ -112,7 +134,9 @@
 		4570CB9E2411443C005C6AEA /* Obc-Memo-SampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				4570CB9F2411443C005C6AEA /* Obc_Memo_SampleTests.m */,
+				452C615724142ECF0032C7F4 /* Repository */,
+				452C615624142ECC0032C7F4 /* DataStore */,
+				452C615524142EC90032C7F4 /* Entity */,
 				4570CBA12411443C005C6AEA /* Info.plist */,
 			);
 			path = "Obc-Memo-SampleTests";
@@ -175,7 +199,6 @@
 				4570CBB724114CD8005C6AEA /* DataStore */,
 				4570CBB624114CD6005C6AEA /* Entity */,
 				4570CBB524114CCB005C6AEA /* Error */,
-				4570CBB424114CC9005C6AEA /* Config */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -196,13 +219,6 @@
 				4570CBAE24114BF7005C6AEA /* Presenter */,
 			);
 			path = Presentation;
-			sourceTree = "<group>";
-		};
-		4570CBB424114CC9005C6AEA /* Config */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Config;
 			sourceTree = "<group>";
 		};
 		4570CBB524114CCB005C6AEA /* Error */ = {
@@ -379,7 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4570CBA02411443C005C6AEA /* Obc_Memo_SampleTests.m in Sources */,
+				452C615924142F190032C7F4 /* MemoItemDataStoreTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

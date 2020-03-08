@@ -16,10 +16,9 @@
                                    CoreDataError * _Nullable error))completion;
 + (nullable CoreDataError *)save:(NSManagedObject * _Nonnull)object;
 + (void)saveAtContext:(NSManagedObjectContext * _Nonnull)context;
-+ (void)fetchArray:(NSArray<NSPredicate * > * _Nonnull)predicates
++ (void)fetchArray:(NSCompoundPredicate * _Nonnull)predicates
            sortKey:(NSString * _Nonnull)sortKey
          ascending:(BOOL * _Nonnull)ascending
-       logicalType:(NSCompoundPredicateType * _Nonnull)logicalType
         completion:(void (^ _Nonnull) (NSArray<MemoItem *> * _Nonnull memoItems,
                                        CoreDataError * _Nullable error))completion;
 + (nullable CoreDataError *)execute:(NSPersistentStoreRequest * _Nonnull)request;

@@ -49,18 +49,16 @@
     }
 }
 
-+ (void)fetchArray:(NSArray<NSPredicate *> * _Nonnull)predicates
++ (void)fetchArray:(NSCompoundPredicate * _Nonnull)predicates
            sortKey:(NSString * _Nonnull)sortKey
          ascending:(BOOL * _Nonnull)ascending
-       logicalType:(NSCompoundPredicateType * _Nonnull)logicalType
         completion:(void (^ _Nonnull)(NSArray<MemoItem *> * _Nullable,
                                       CoreDataError * _Nullable))completion {
     NSManagedObjectContext * _Nonnull context = CoreDataManager.shared.persistentContainer.viewContext;
     NSFetchRequest<MemoItem *> * _Nonnull fetchRequest = [MemoItem fetchRequest];
     NSSortDescriptor * _Nonnull sortDescriptor = [[NSSortDescriptor alloc] initWithKey:sortKey ascending:ascending];
     fetchRequest.sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
-    fetchRequest.predicate = [[NSCompoundPredicate alloc] initWithType: *logicalType
-                                                         subpredicates:[[NSArray alloc] initWithObjects:predicates, nil]];
+    fetchRequest.predicate = predicates;
     NSFetchedResultsController * _Nonnull resultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
                                                                                                   managedObjectContext:context
                                                                                                     sectionNameKeyPath:nil
