@@ -11,7 +11,7 @@
 
 @implementation MemoItemDataStoreImpl
 
-+ (void)create:(NSString * _Nonnull)entityName
+- (void)create:(NSString * _Nonnull)entityName
     completion:(void (^ _Nonnull)(MemoItem * _Nullable,
                                   CoreDataError * _Nullable))completion {
     NSManagedObjectContext * _Nonnull context = CoreDataManager.shared.persistentContainer.viewContext;
@@ -27,7 +27,7 @@
     completion(memoItem, nil);
 }
 
-+ (void)delete:(NSManagedObject * _Nonnull)object
+- (void)delete:(NSManagedObject * _Nonnull)object
     completion:(void (^ _Nonnull)(void))completion {
     NSManagedObjectContext * _Nonnull context = CoreDataManager.shared.persistentContainer.viewContext;
     [context performBlockAndWait:^{
@@ -36,7 +36,7 @@
     }];
 }
 
-+ (nullable CoreDataError *)execute:(NSPersistentStoreRequest * _Nonnull)request {
+- (nullable CoreDataError *)execute:(NSPersistentStoreRequest * _Nonnull)request {
     NSManagedObjectContext * _Nonnull context = CoreDataManager.shared.persistentContainer.viewContext;
     NSError * _Nullable error = nil;
 
@@ -49,7 +49,7 @@
     }
 }
 
-+ (void)fetchArray:(NSCompoundPredicate * _Nonnull)predicates
+- (void)fetchArray:(NSCompoundPredicate * _Nonnull)predicates
            sortKey:(NSString * _Nonnull)sortKey
          ascending:(BOOL * _Nonnull)ascending
         completion:(void (^ _Nonnull)(NSArray<MemoItem *> * _Nullable,
@@ -78,7 +78,7 @@
     }
 }
 
-+ (nullable CoreDataError *)save:(NSManagedObject * _Nonnull)object {
+- (nullable CoreDataError *)save:(NSManagedObject * _Nonnull)object {
     NSManagedObjectContext * _Nullable context = object.managedObjectContext;
     if (context == nil) {
         return NotFoundContext;
@@ -97,7 +97,7 @@
     return nil;
 }
 
-+ (void)saveAtContext:(NSManagedObjectContext * _Nonnull)context {
+- (void)saveAtContext:(NSManagedObjectContext * _Nonnull)context {
     if (context.hasChanges) {
         [context save:nil];
     }

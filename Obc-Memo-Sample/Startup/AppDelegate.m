@@ -21,7 +21,8 @@
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    [MemoItemDataStoreImpl saveAtContext:CoreDataManager.shared.persistentContainer.viewContext];
+    NSObject<MemoItemDataStore> * memoItemDataStore = [MemoItemDataStoreImpl new];
+    [memoItemDataStore saveAtContext:CoreDataManager.shared.persistentContainer.viewContext];
 }
 
 @end

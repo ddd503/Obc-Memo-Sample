@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		452C615924142F190032C7F4 /* MemoItemDataStoreTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 452C615824142F190032C7F4 /* MemoItemDataStoreTest.m */; };
+		452C615C2415A45C0032C7F4 /* MemoItemRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 452C615B2415A45C0032C7F4 /* MemoItemRepository.m */; };
 		4570CB8224114439005C6AEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CB8124114439005C6AEA /* AppDelegate.m */; };
 		4570CB8824114439005C6AEA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CB8724114439005C6AEA /* ViewController.m */; };
 		4570CB8B24114439005C6AEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4570CB8924114439005C6AEA /* Main.storyboard */; };
@@ -33,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		452C615824142F190032C7F4 /* MemoItemDataStoreTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoItemDataStoreTest.m; sourceTree = "<group>"; };
+		452C615A2415A4540032C7F4 /* MemoItemRepository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoItemRepository.h; sourceTree = "<group>"; };
+		452C615B2415A45C0032C7F4 /* MemoItemRepository.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoItemRepository.m; sourceTree = "<group>"; };
 		4570CB7D24114439005C6AEA /* Obc-Memo-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Obc-Memo-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4570CB8024114439005C6AEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4570CB8124114439005C6AEA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -255,6 +258,8 @@
 		4570CBB824114CDB005C6AEA /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				452C615A2415A4540032C7F4 /* MemoItemRepository.h */,
+				452C615B2415A45C0032C7F4 /* MemoItemRepository.m */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -381,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4570CBC42413718D005C6AEA /* MemoItem+CoreDataProperties.m in Sources */,
+				452C615C2415A45C0032C7F4 /* MemoItemRepository.m in Sources */,
 				4570CB962411443C005C6AEA /* main.m in Sources */,
 				4570CBC6241372B6005C6AEA /* CoreDataManager.m in Sources */,
 				4570CB8824114439005C6AEA /* ViewController.m in Sources */,
