@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		452C615924142F190032C7F4 /* MemoItemDataStoreTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 452C615824142F190032C7F4 /* MemoItemDataStoreTest.m */; };
 		452C615C2415A45C0032C7F4 /* MemoItemRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 452C615B2415A45C0032C7F4 /* MemoItemRepository.m */; };
+		452C617E241FC1F90032C7F4 /* NSString+.m in Sources */ = {isa = PBXBuildFile; fileRef = 452C617D241FC1F90032C7F4 /* NSString+.m */; };
 		4570CB8224114439005C6AEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CB8124114439005C6AEA /* AppDelegate.m */; };
 		4570CB8824114439005C6AEA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CB8724114439005C6AEA /* ViewController.m */; };
 		4570CB8B24114439005C6AEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4570CB8924114439005C6AEA /* Main.storyboard */; };
@@ -36,6 +37,8 @@
 		452C615824142F190032C7F4 /* MemoItemDataStoreTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoItemDataStoreTest.m; sourceTree = "<group>"; };
 		452C615A2415A4540032C7F4 /* MemoItemRepository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoItemRepository.h; sourceTree = "<group>"; };
 		452C615B2415A45C0032C7F4 /* MemoItemRepository.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoItemRepository.m; sourceTree = "<group>"; };
+		452C617D241FC1F90032C7F4 /* NSString+.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+.m"; sourceTree = "<group>"; };
+		452C617F241FC2020032C7F4 /* NSString+.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+.h"; sourceTree = "<group>"; };
 		4570CB7D24114439005C6AEA /* Obc-Memo-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Obc-Memo-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4570CB8024114439005C6AEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4570CB8124114439005C6AEA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -169,7 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				4570CBBE24114DF5005C6AEA /* DI */,
-				4570CBBD24114DF3005C6AEA /* Extension */,
+				4570CBBD24114DF3005C6AEA /* Category */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -271,11 +274,13 @@
 			path = Translater;
 			sourceTree = "<group>";
 		};
-		4570CBBD24114DF3005C6AEA /* Extension */ = {
+		4570CBBD24114DF3005C6AEA /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				452C617D241FC1F90032C7F4 /* NSString+.m */,
+				452C617F241FC2020032C7F4 /* NSString+.h */,
 			);
-			path = Extension;
+			path = Category;
 			sourceTree = "<group>";
 		};
 		4570CBBE24114DF5005C6AEA /* DI */ = {
@@ -390,6 +395,7 @@
 				4570CB962411443C005C6AEA /* main.m in Sources */,
 				4570CBC6241372B6005C6AEA /* CoreDataManager.m in Sources */,
 				4570CB8824114439005C6AEA /* ViewController.m in Sources */,
+				452C617E241FC1F90032C7F4 /* NSString+.m in Sources */,
 				4570CBC32413718D005C6AEA /* MemoItem+CoreDataClass.m in Sources */,
 				4570CB8224114439005C6AEA /* AppDelegate.m in Sources */,
 				4570CB8E24114439005C6AEA /* Obc_Memo_Sample.xcdatamodeld in Sources */,
