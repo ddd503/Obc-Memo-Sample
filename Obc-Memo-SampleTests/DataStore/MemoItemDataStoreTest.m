@@ -26,8 +26,9 @@
 
 - (void)test_create_任意のEntityを新規作成できること {
     XCTestExpectation *expectation = [self expectationWithDescription:@"任意のEntityを新規作成できること"];
-    [MemoItemDataStoreImpl create:@"MemoItem" completion:^(MemoItem * _Nullable memoItem,
-                                                           CoreDataError * _Nullable error) {
+    NSObject<MemoItemDataStore> * dataStore = [MemoItemDataStoreImpl new];
+    [dataStore create:@"MemoItem" completion:^(MemoItem * _Nullable memoItem,
+                                               CoreDataError * _Nullable error) {
         if (error != nil || memoItem == nil) {
             XCTFail();
         }
@@ -40,14 +41,15 @@
 
 - (void)test_fetchArray_条件を指定してEntityの配列を取得できること {
     XCTestExpectation *expectation = [self expectationWithDescription:@"条件を指定してEntityの配列を取得できること"];
+    NSObject<MemoItemDataStore> * dataStore = [MemoItemDataStoreImpl new];
     NSString * entityName = @"MemoItem";
     dispatch_group_t group = dispatch_group_create();
 
     for(int i=0; i<3; i++){
         dispatch_group_enter(group);
-        [MemoItemDataStoreImpl create:entityName completion:^(MemoItem * _Nullable memoItem, CoreDataError * _Nullable error) {
+        [dataStore create:entityName completion:^(MemoItem * _Nullable memoItem, CoreDataError * _Nullable error) {
             memoItem.uniqueId = [NSString stringWithFormat:@"テスト%d", i];
-            [MemoItemDataStoreImpl save:memoItem];
+            [dataStore save:memoItem];
             dispatch_group_leave(group);
         }];
     }
@@ -59,10 +61,10 @@
     NSArray<NSPredicate *> * _Nonnull predicateArray = [[NSArray alloc] initWithObjects:predicate1, predicate2, nil];
     NSCompoundPredicate * _Nonnull predicates = [NSCompoundPredicate orPredicateWithSubpredicates:predicateArray];
     bool ascending = NO;
-    [MemoItemDataStoreImpl fetchArray:predicates
-                              sortKey:@"editDate"
-                            ascending:&ascending
-                           completion:^(NSArray<MemoItem *> * _Nonnull memoItems, CoreDataError * _Nullable error) {
+    [dataStore fetchArray:predicates
+                  sortKey:@"editDate"
+                ascending:&ascending
+               completion:^(NSArray<MemoItem *> * _Nonnull memoItems, CoreDataError * _Nullable error) {
         if (error != nil || memoItems == nil) {
             XCTFail();
         }
@@ -75,15 +77,16 @@
 
 - (void)test_execute_リクエストが実行されていること {
     XCTestExpectation *expectation = [self expectationWithDescription:@"リクエストが実行されていること"];
+    NSObject<MemoItemDataStore> * dataStore = [MemoItemDataStoreImpl new];
     NSString * entityName = @"MemoItem";
     int allMemoItemsCount = 100;
     dispatch_group_t group = dispatch_group_create();
 
     for(int i=0; i<allMemoItemsCount; i++){
         dispatch_group_enter(group);
-        [MemoItemDataStoreImpl create:entityName completion:^(MemoItem * _Nullable memoItem, CoreDataError * _Nullable error) {
+        [dataStore create:entityName completion:^(MemoItem * _Nullable memoItem, CoreDataError * _Nullable error) {
             memoItem.uniqueId = [NSString stringWithFormat:@"テスト%d", i];
-            [MemoItemDataStoreImpl save:memoItem];
+            [dataStore save:memoItem];
             dispatch_group_leave(group);
         }];
     }
@@ -93,24 +96,24 @@
     NSCompoundPredicate * _Nonnull predicates = [NSCompoundPredicate andPredicateWithSubpredicates:predicateArray];
     NSString * sortKey = @"editDate";
     bool ascending = NO;
-    [MemoItemDataStoreImpl fetchArray:predicates
-                              sortKey:sortKey
-                            ascending:&ascending
-                           completion:^(NSArray<MemoItem *> * _Nonnull memoItems, CoreDataError * _Nullable error) {
+    [dataStore fetchArray:predicates
+                  sortKey:sortKey
+                ascending:&ascending
+               completion:^(NSArray<MemoItem *> * _Nonnull memoItems, CoreDataError * _Nullable error) {
         XCTAssertEqual(memoItems.count, allMemoItemsCount,
                        @"削除実行前はallMemosCount分の要素があるはず");
 
         NSFetchRequest<MemoItem *> * request = [[NSFetchRequest alloc] initWithEntityName:@"MemoItem"];
         NSBatchDeleteRequest * deleteRequest = [[NSBatchDeleteRequest alloc] initWithFetchRequest:request];
 
-        CoreDataError * _Nullable coreDataError = [MemoItemDataStoreImpl execute:deleteRequest];
+        CoreDataError * _Nullable coreDataError = [dataStore execute:deleteRequest];
 
         XCTAssertTrue(coreDataError == nil);
 
-        [MemoItemDataStoreImpl fetchArray:predicates
-                                  sortKey:sortKey
-                                ascending:&ascending
-                               completion:^(NSArray<MemoItem *> * _Nonnull memoItems, CoreDataError * _Nullable error) {
+        [dataStore fetchArray:predicates
+                      sortKey:sortKey
+                    ascending:&ascending
+                   completion:^(NSArray<MemoItem *> * _Nonnull memoItems, CoreDataError * _Nullable error) {
             if (error != nil || memoItems == nil) {
                 XCTFail();
             }
@@ -124,6 +127,7 @@
 
 - (void)test_delete_指定した1件のEntityを削除できること {
     XCTestExpectation *expectation = [self expectationWithDescription:@"指定した1件のEntityを削除できること"];
+    NSObject<MemoItemDataStore> * dataStore = [MemoItemDataStoreImpl new];
     NSString * entityName = @"MemoItem";
     int allMemoItemsCount = 3;
     NSMutableArray<MemoItem *> * dummyArray = [[NSMutableArray alloc] init];
@@ -131,9 +135,9 @@
 
     for(int i=0; i<allMemoItemsCount; i++){
         dispatch_group_enter(group);
-        [MemoItemDataStoreImpl create:entityName completion:^(MemoItem * _Nullable memoItem, CoreDataError * _Nullable error) {
+        [dataStore create:entityName completion:^(MemoItem * _Nullable memoItem, CoreDataError * _Nullable error) {
             memoItem.uniqueId = [NSString stringWithFormat:@"%d", i];
-            [MemoItemDataStoreImpl save:memoItem];
+            [dataStore save:memoItem];
             [dummyArray addObject:memoItem];
             dispatch_group_leave(group);
         }];
@@ -144,20 +148,20 @@
     NSCompoundPredicate * _Nonnull predicates = [NSCompoundPredicate andPredicateWithSubpredicates:predicateArray];
     NSString * sortKey = @"editDate";
     bool ascending = NO;
-    [MemoItemDataStoreImpl fetchArray:predicates
-                              sortKey:sortKey
-                            ascending:&ascending
-                           completion:^(NSArray<MemoItem *> * _Nonnull memoItems, CoreDataError * _Nullable error) {
+    [dataStore fetchArray:predicates
+                  sortKey:sortKey
+                ascending:&ascending
+               completion:^(NSArray<MemoItem *> * _Nonnull memoItems, CoreDataError * _Nullable error) {
         XCTAssertEqual(memoItems.count, allMemoItemsCount, @"削除実行前はallMemosCount分の要素があるはず");
 
         [dummyArray filterUsingPredicate:[NSPredicate predicateWithFormat:@"uniqueId == %@", @"2"]];
         MemoItem * deleteItem = dummyArray[0];
 
-        [MemoItemDataStoreImpl delete:deleteItem completion:^{
-            [MemoItemDataStoreImpl fetchArray:predicates
-                                      sortKey:sortKey
-                                    ascending:&ascending
-                                   completion:^(NSArray<MemoItem *> * _Nonnull memoItems, CoreDataError * _Nullable error) {
+        [dataStore delete:deleteItem completion:^{
+            [dataStore fetchArray:predicates
+                          sortKey:sortKey
+                        ascending:&ascending
+                       completion:^(NSArray<MemoItem *> * _Nonnull memoItems, CoreDataError * _Nullable error) {
                 if (error != nil || memoItems == nil) {
                     XCTFail();
                 }
