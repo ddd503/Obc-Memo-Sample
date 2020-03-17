@@ -21,6 +21,7 @@
           completion:(void (^ _Nonnull)(MemoItem * _Nullable memoItem,
                                         NSInteger * _Nullable errorCode))completion;
 - (void)updateMemoItem:(NSString * _Nonnull)uniqueId
+                  text:(NSString * _Nonnull)text
             completion:(void (^ _Nonnull)(void * _Nullable (void),
                                           NSInteger * _Nullable errorCode))completion;
 - (void)deleteAllMemoItems:(NSString * _Nonnull)entityName
@@ -29,7 +30,7 @@
 - (void)deleteMemoItem:(NSString * _Nonnull)uniqueId
             completion:(void (^ _Nonnull)(void * _Nullable (void),
                                           NSInteger * _Nullable errorCode))completion;
-- (void)countAllMemoItems:(void (^ _Nonnull)(NSInteger * _Nonnull errorCode))completion;
+- (void)countAllMemoItems:(void (^ _Nonnull)(NSInteger * _Nonnull count))completion;
 @end
 
 @interface MemoItemRepositoryImpl : NSObject <MemoItemRepository>

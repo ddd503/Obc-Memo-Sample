@@ -10,6 +10,7 @@
 #import "MemoItemRepository.h"
 #import "MemoItemDataStore.h"
 #import "CoreDataError.h"
+#import "NSString+.h"
 
 @interface MemoItemRepositoryImpl ()
 @property (nonatomic) NSObject<MemoItemDataStore> * _Nonnull memoItemDataStore;
@@ -24,7 +25,6 @@
     }
     return self;
 }
-
 
 - (void)countAllMemoItems:(void (^ _Nonnull)(NSInteger * _Nonnull))completion {
     [self readAllMemoItems:^(NSArray<MemoItem *> * _Nullable memoItems, NSInteger * _Nullable errorCode) {
@@ -46,8 +46,16 @@
                 completion(nil, NotFoundContext);
             } else {
                 [context performBlockAndWait:^{
-                    // メモ内容更新
-
+                    memoItem.title = text.firstLine;
+                    memoItem.content = text.afterSecondLine;
+                    memoItem.editDate = [NSDate new];
+                    if (uniqueId == nil) {
+                        [self countAllMemoItems:^(NSInteger * _Nonnull count) {
+                            memoItem.uniqueId = [NSString stringWithFormat:@"%ld", (long)count];
+                        }];
+                    } else {
+                        memoItem.uniqueId = uniqueId;
+                    }
                     [self.memoItemDataStore save:memoItem];
                 }];
                 completion(memoItem, nil);
@@ -122,6 +130,7 @@
 
 
 - (void)updateMemoItem:(NSString * _Nonnull)uniqueId
+                  text:(NSString * _Nonnull)text
             completion:(void (^ _Nonnull)(void * _Nullable (*)(void), NSInteger * _Nullable))completion {
     [self readMemoItem:uniqueId completion:^(MemoItem * _Nullable memoItem, NSInteger * _Nullable errorCode) {
         if (errorCode != nil) {
@@ -132,8 +141,10 @@
                 completion(nil, NotFoundContext);
             } else {
                 [context performBlockAndWait:^{
+                    memoItem.title = text.firstLine;
+                    memoItem.content = text.afterSecondLine;
+                    memoItem.editDate = [NSDate new];
                     // メモ内容更新
-
                     [self.memoItemDataStore save:memoItem];
                 }];
                 completion(nil, nil);
