@@ -26,7 +26,7 @@
 
 - (void)test_create_任意のEntityを新規作成できること {
     XCTestExpectation *expectation = [self expectationWithDescription:@"任意のEntityを新規作成できること"];
-    NSObject<MemoItemDataStore> * dataStore = [MemoItemDataStoreImpl new];
+    MemoItemDataStoreImpl * dataStore = [MemoItemDataStoreImpl new];
     [dataStore create:@"MemoItem" completion:^(MemoItem * _Nullable memoItem,
                                                CoreDataError * _Nullable error) {
         if (error != nil || memoItem == nil) {
@@ -41,7 +41,7 @@
 
 - (void)test_fetchArray_条件を指定してEntityの配列を取得できること {
     XCTestExpectation *expectation = [self expectationWithDescription:@"条件を指定してEntityの配列を取得できること"];
-    NSObject<MemoItemDataStore> * dataStore = [MemoItemDataStoreImpl new];
+    MemoItemDataStoreImpl * dataStore = [MemoItemDataStoreImpl new];
     NSString * entityName = @"MemoItem";
     dispatch_group_t group = dispatch_group_create();
 
@@ -77,7 +77,7 @@
 
 - (void)test_execute_リクエストが実行されていること {
     XCTestExpectation *expectation = [self expectationWithDescription:@"リクエストが実行されていること"];
-    NSObject<MemoItemDataStore> * dataStore = [MemoItemDataStoreImpl new];
+    MemoItemDataStoreImpl * dataStore = [MemoItemDataStoreImpl new];
     NSString * entityName = @"MemoItem";
     int allMemoItemsCount = 100;
     dispatch_group_t group = dispatch_group_create();
@@ -127,7 +127,7 @@
 
 - (void)test_delete_指定した1件のEntityを削除できること {
     XCTestExpectation *expectation = [self expectationWithDescription:@"指定した1件のEntityを削除できること"];
-    NSObject<MemoItemDataStore> * dataStore = [MemoItemDataStoreImpl new];
+    MemoItemDataStoreImpl * dataStore = [MemoItemDataStoreImpl new];
     NSString * entityName = @"MemoItem";
     int allMemoItemsCount = 3;
     NSMutableArray<MemoItem *> * dummyArray = [[NSMutableArray alloc] init];

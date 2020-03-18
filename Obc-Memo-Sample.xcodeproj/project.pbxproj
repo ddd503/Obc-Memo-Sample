@@ -21,9 +21,9 @@
 		4570CBC42413718D005C6AEA /* MemoItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CBC22413718D005C6AEA /* MemoItem+CoreDataProperties.m */; };
 		4570CBC6241372B6005C6AEA /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CBC5241372B6005C6AEA /* CoreDataManager.m */; };
 		4570CBCA2413B45F005C6AEA /* MemoItemDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CBC92413B45F005C6AEA /* MemoItemDataStore.m */; };
-		45E22AD4242110900010B1AF /* MemoItemRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E22AD3242110900010B1AF /* MemoItemRepositoryTest.swift */; };
 		45E22AD6242111380010B1AF /* MemoItemDataStoreMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E22AD5242111380010B1AF /* MemoItemDataStoreMock.m */; };
 		45E22ADA242124F70010B1AF /* MemoItemMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E22AD9242124F70010B1AF /* MemoItemMock.m */; };
+		45E22ADC24226A730010B1AF /* MemoItemRepositoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E22ADB24226A730010B1AF /* MemoItemRepositoryTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,11 +64,11 @@
 		4570CBC82413B404005C6AEA /* MemoItemDataStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoItemDataStore.h; sourceTree = "<group>"; };
 		4570CBC92413B45F005C6AEA /* MemoItemDataStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoItemDataStore.m; sourceTree = "<group>"; };
 		4570CBCB2413E348005C6AEA /* CoreDataError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataError.h; sourceTree = "<group>"; };
-		45E22AD3242110900010B1AF /* MemoItemRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoItemRepositoryTest.swift; sourceTree = "<group>"; };
 		45E22AD5242111380010B1AF /* MemoItemDataStoreMock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoItemDataStoreMock.m; sourceTree = "<group>"; };
 		45E22AD72421113F0010B1AF /* MemoItemDataStoreMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoItemDataStoreMock.h; sourceTree = "<group>"; };
 		45E22AD8242124EF0010B1AF /* MemoItemMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoItemMock.h; sourceTree = "<group>"; };
 		45E22AD9242124F70010B1AF /* MemoItemMock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoItemMock.m; sourceTree = "<group>"; };
+		45E22ADB24226A730010B1AF /* MemoItemRepositoryTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoItemRepositoryTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +111,7 @@
 		452C615724142ECF0032C7F4 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				45E22AD3242110900010B1AF /* MemoItemRepositoryTest.swift */,
+				45E22ADB24226A730010B1AF /* MemoItemRepositoryTest.m */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -421,8 +421,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45E22ADC24226A730010B1AF /* MemoItemRepositoryTest.m in Sources */,
 				45E22ADA242124F70010B1AF /* MemoItemMock.m in Sources */,
-				45E22AD4242110900010B1AF /* MemoItemRepositoryTest.swift in Sources */,
 				452C615924142F190032C7F4 /* MemoItemDataStoreTest.m in Sources */,
 				45E22AD6242111380010B1AF /* MemoItemDataStoreMock.m in Sources */,
 			);

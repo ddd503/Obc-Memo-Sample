@@ -7,6 +7,7 @@
 //
 
 #import "MemoItem+CoreDataClass.h"
+#import "MemoItemDataStore.h"
 
 @protocol MemoItemRepository <NSObject>
 
@@ -34,5 +35,5 @@
 @end
 
 @interface MemoItemRepositoryImpl : NSObject <MemoItemRepository>
-
+- (instancetype _Nonnull)initWith:(NSObject<MemoItemDataStore> * _Nonnull)memoItemDataStore;
 @end

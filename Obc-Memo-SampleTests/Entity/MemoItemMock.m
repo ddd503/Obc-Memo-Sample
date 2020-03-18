@@ -18,6 +18,11 @@
 
 @implementation MemoItemMock
 
+@synthesize uniqueIdText;
+@synthesize titleText;
+@synthesize contentText;
+@synthesize editMemoDate;
+
 - (instancetype _Nonnull)initWith:(NSString * _Nonnull)uniqueIdText
                         titleText:(NSString * _Nullable)titleText
                       contentText:(NSString * _Nullable)contentText

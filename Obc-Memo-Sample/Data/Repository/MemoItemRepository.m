@@ -64,7 +64,6 @@
     }];
 }
 
-
 - (void)deleteAllMemoItems:(NSString * _Nonnull)entityName
                 completion:(void (^ _Nonnull)(void * _Nullable (*)(void), NSInteger * _Nullable))completion {
     NSFetchRequest * request = [[NSFetchRequest alloc] initWithEntityName:entityName];
@@ -94,7 +93,8 @@
 
 - (void)readAllMemoItems:(void (^ _Nonnull)(NSArray<MemoItem *> * _Nullable, NSInteger * _Nullable))completion {
     bool ascending = NO;
-    [self.memoItemDataStore fetchArray:[NSCompoundPredicate new]
+    [self.memoItemDataStore fetchArray:[[NSCompoundPredicate alloc] initWithType:NSAndPredicateType
+                                                                   subpredicates:[NSArray<NSPredicate *> new]]
                                sortKey:@"editDate"
                              ascending:&ascending
                             completion:^(NSArray<MemoItem *> * _Nonnull memoItems, CoreDataError * _Nullable error) {
