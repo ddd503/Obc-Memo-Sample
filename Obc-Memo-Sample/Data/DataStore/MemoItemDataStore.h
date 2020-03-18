@@ -16,7 +16,7 @@
 - (void)create:(NSString * _Nonnull)entityName
     completion:(void (^ _Nonnull)(MemoItem * _Nullable memoItem,
                                   CoreDataError * _Nullable error))completion;
-- (nullable CoreDataError *)save:(NSManagedObject * _Nonnull)object;
+- (nullable CoreDataError *)save:(MemoItem * _Nonnull)memoItem;
 - (void)saveAtContext:(NSManagedObjectContext * _Nonnull)context;
 - (void)fetchArray:(NSCompoundPredicate * _Nonnull)predicates
            sortKey:(NSString * _Nonnull)sortKey
@@ -24,7 +24,7 @@
         completion:(void (^ _Nonnull)(NSArray<MemoItem *> * _Nonnull memoItems,
                                       CoreDataError * _Nullable error))completion;
 - (nullable CoreDataError *)execute:(NSPersistentStoreRequest * _Nonnull)request;
-- (void)delete:(NSManagedObject * _Nonnull)object completion:(void (^ _Nonnull)(void))completion;
+- (void)delete:(MemoItem * _Nonnull)memoItem completion:(void (^ _Nonnull)(void))completion;
 @end
 
 @interface MemoItemDataStoreImpl : NSObject <MemoItemDataStore>

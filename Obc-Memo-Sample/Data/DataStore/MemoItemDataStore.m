@@ -27,11 +27,11 @@
     completion(memoItem, nil);
 }
 
-- (void)delete:(NSManagedObject * _Nonnull)object
+- (void)delete:(MemoItem * _Nonnull)memoItem
     completion:(void (^ _Nonnull)(void))completion {
     NSManagedObjectContext * _Nonnull context = CoreDataManager.shared.persistentContainer.viewContext;
     [context performBlockAndWait:^{
-        [context deleteObject:object];
+        [context deleteObject:memoItem];
         completion();
     }];
 }
@@ -78,8 +78,8 @@
     }
 }
 
-- (nullable CoreDataError *)save:(NSManagedObject * _Nonnull)object {
-    NSManagedObjectContext * _Nullable context = object.managedObjectContext;
+- (nullable CoreDataError *)save:(MemoItem * _Nonnull)memoItem {
+    NSManagedObjectContext * _Nullable context = memoItem.managedObjectContext;
     if (context == nil) {
         return NotFoundContext;
     }

@@ -21,6 +21,9 @@
 		4570CBC42413718D005C6AEA /* MemoItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CBC22413718D005C6AEA /* MemoItem+CoreDataProperties.m */; };
 		4570CBC6241372B6005C6AEA /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CBC5241372B6005C6AEA /* CoreDataManager.m */; };
 		4570CBCA2413B45F005C6AEA /* MemoItemDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4570CBC92413B45F005C6AEA /* MemoItemDataStore.m */; };
+		45E22AD4242110900010B1AF /* MemoItemRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E22AD3242110900010B1AF /* MemoItemRepositoryTest.swift */; };
+		45E22AD6242111380010B1AF /* MemoItemDataStoreMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E22AD5242111380010B1AF /* MemoItemDataStoreMock.m */; };
+		45E22ADA242124F70010B1AF /* MemoItemMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E22AD9242124F70010B1AF /* MemoItemMock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,11 @@
 		4570CBC82413B404005C6AEA /* MemoItemDataStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoItemDataStore.h; sourceTree = "<group>"; };
 		4570CBC92413B45F005C6AEA /* MemoItemDataStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoItemDataStore.m; sourceTree = "<group>"; };
 		4570CBCB2413E348005C6AEA /* CoreDataError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataError.h; sourceTree = "<group>"; };
+		45E22AD3242110900010B1AF /* MemoItemRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoItemRepositoryTest.swift; sourceTree = "<group>"; };
+		45E22AD5242111380010B1AF /* MemoItemDataStoreMock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoItemDataStoreMock.m; sourceTree = "<group>"; };
+		45E22AD72421113F0010B1AF /* MemoItemDataStoreMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoItemDataStoreMock.h; sourceTree = "<group>"; };
+		45E22AD8242124EF0010B1AF /* MemoItemMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoItemMock.h; sourceTree = "<group>"; };
+		45E22AD9242124F70010B1AF /* MemoItemMock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoItemMock.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +92,8 @@
 		452C615524142EC90032C7F4 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				45E22AD8242124EF0010B1AF /* MemoItemMock.h */,
+				45E22AD9242124F70010B1AF /* MemoItemMock.m */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -92,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				452C615824142F190032C7F4 /* MemoItemDataStoreTest.m */,
+				45E22AD5242111380010B1AF /* MemoItemDataStoreMock.m */,
+				45E22AD72421113F0010B1AF /* MemoItemDataStoreMock.h */,
 			);
 			path = DataStore;
 			sourceTree = "<group>";
@@ -99,6 +111,7 @@
 		452C615724142ECF0032C7F4 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				45E22AD3242110900010B1AF /* MemoItemRepositoryTest.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -342,6 +355,7 @@
 					};
 					4570CB9A2411443C005C6AEA = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 						TestTargetID = 4570CB7C24114439005C6AEA;
 					};
 				};
@@ -407,7 +421,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45E22ADA242124F70010B1AF /* MemoItemMock.m in Sources */,
+				45E22AD4242110900010B1AF /* MemoItemRepositoryTest.swift in Sources */,
 				452C615924142F190032C7F4 /* MemoItemDataStoreTest.m in Sources */,
+				45E22AD6242111380010B1AF /* MemoItemDataStoreMock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,6 +608,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LVR5UQEHBD;
 				INFOPLIST_FILE = "Obc-Memo-SampleTests/Info.plist";
@@ -602,6 +620,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kawahara.Obc-Memo-SampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Obc-Memo-Sample.app/Obc-Memo-Sample";
 			};
@@ -611,6 +631,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LVR5UQEHBD;
 				INFOPLIST_FILE = "Obc-Memo-SampleTests/Info.plist";
@@ -622,6 +643,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kawahara.Obc-Memo-SampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Obc-Memo-Sample.app/Obc-Memo-Sample";
 			};
