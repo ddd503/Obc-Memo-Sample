@@ -25,6 +25,7 @@
 		45E22ADA242124F70010B1AF /* MemoItemMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E22AD9242124F70010B1AF /* MemoItemMock.m */; };
 		45E22ADC24226A730010B1AF /* MemoItemRepositoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E22ADB24226A730010B1AF /* MemoItemRepositoryTest.m */; };
 		45E22ADE2423CFE00010B1AF /* Memo.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E22ADD2423CFE00010B1AF /* Memo.m */; };
+		45E22AE22423D2A70010B1AF /* Translater.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E22AE12423D2A70010B1AF /* Translater.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		45E22ADB24226A730010B1AF /* MemoItemRepositoryTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoItemRepositoryTest.m; sourceTree = "<group>"; };
 		45E22ADD2423CFE00010B1AF /* Memo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Memo.m; sourceTree = "<group>"; };
 		45E22ADF2423CFE70010B1AF /* Memo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Memo.h; sourceTree = "<group>"; };
+		45E22AE02423D29F0010B1AF /* Translater.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Translater.h; sourceTree = "<group>"; };
+		45E22AE12423D2A70010B1AF /* Translater.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Translater.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +291,8 @@
 		4570CBB924114D27005C6AEA /* Translater */ = {
 			isa = PBXGroup;
 			children = (
+				45E22AE02423D29F0010B1AF /* Translater.h */,
+				45E22AE12423D2A70010B1AF /* Translater.m */,
 			);
 			path = Translater;
 			sourceTree = "<group>";
@@ -416,6 +421,7 @@
 				4570CB8824114439005C6AEA /* ViewController.m in Sources */,
 				452C617E241FC1F90032C7F4 /* NSString+.m in Sources */,
 				4570CBC32413718D005C6AEA /* MemoItem+CoreDataClass.m in Sources */,
+				45E22AE22423D2A70010B1AF /* Translater.m in Sources */,
 				4570CB8224114439005C6AEA /* AppDelegate.m in Sources */,
 				4570CB8E24114439005C6AEA /* Obc_Memo_Sample.xcdatamodeld in Sources */,
 				4570CBCA2413B45F005C6AEA /* MemoItemDataStore.m in Sources */,
