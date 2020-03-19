@@ -51,7 +51,7 @@
                     memoItem.editDate = [NSDate new];
                     if (uniqueId == nil) {
                         [self countAllMemoItems:^(NSInteger * _Nonnull count) {
-                            memoItem.uniqueId = [NSString stringWithFormat:@"%ld", (long)count];
+                            memoItem.uniqueId = [NSString stringWithFormat:@"%ld", (long)count + 1];
                         }];
                     } else {
                         memoItem.uniqueId = uniqueId;
@@ -110,7 +110,7 @@
 - (void)readMemoItem:(NSString * _Nonnull)uniqueId
           completion:(void (^ _Nonnull)(MemoItem * _Nullable, NSInteger * _Nullable))completion {
     bool ascending = NO;
-    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"uniqueId == @%", uniqueId];
+    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"uniqueId == %@", uniqueId];
     [self.memoItemDataStore fetchArray:[[NSCompoundPredicate alloc] initWithType:NSAndPredicateType
                                                                    subpredicates:[[NSArray<NSPredicate *> alloc] initWithObjects:predicate, nil]]
                                sortKey:@"editDate"

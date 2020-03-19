@@ -18,6 +18,7 @@
 
 @implementation MemoItemMock
 
+// getter, setter はデフォルト
 @synthesize uniqueIdText;
 @synthesize titleText;
 @synthesize contentText;
@@ -42,7 +43,7 @@
 }
 
 - (void)setUniqueId:(NSString *)uniqueId {
-    self.uniqueId = uniqueId;
+    self.uniqueIdText = uniqueId;
 }
 
 - (NSString * _Nullable)title {
@@ -50,7 +51,7 @@
 }
 
 - (void)setTitle:(NSString *)title {
-    self.title = title;
+    self.titleText = title;
 }
 
 - (NSString * _Nullable)content {
@@ -58,7 +59,7 @@
 }
 
 - (void)setContent:(NSString *)content {
-    self.content = content;
+    self.contentText = content;
 }
 
 - (NSDate * _Nullable)editDate {
@@ -66,7 +67,7 @@
 }
 
 - (void)setEditDate:(NSDate *)editDate {
-    self.editDate = editDate;
+    self.editMemoDate = editDate;
 }
 
 - (NSManagedObjectContext * _Nullable)managedObjectContext {

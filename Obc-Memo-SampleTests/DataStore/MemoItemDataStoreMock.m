@@ -43,6 +43,7 @@
         }
         self.dummyDataBase = mutableDataBase;
     }
+    completion();
 }
 
 - (nullable CoreDataError *)execute:(NSPersistentStoreRequest * _Nonnull)request {
@@ -62,8 +63,9 @@
         completion:(void (^ _Nonnull)(NSArray<MemoItem *> * _Nonnull,
                                       CoreDataError * _Nullable))completion {
     if (self.isSuccessFunc) {
-        [self.dummyDataBase filterUsingPredicate:predicates];
-        completion(self.dummyDataBase, nil);
+        NSMutableArray<MemoItem *> * mutableDataBase = [[NSMutableArray<MemoItem *> alloc] initWithArray:self.dummyDataBase];
+        [mutableDataBase filterUsingPredicate:predicates];
+        completion(mutableDataBase, nil);
     } else {
         completion([NSMutableArray<MemoItem *> new], FailedFetchRequest);
     }
@@ -71,7 +73,14 @@
 
 - (nullable CoreDataError *)save:(MemoItem * _Nonnull)memoItem {
     if (self.isSuccessFunc) {
-        [self.dummyDataBase addObject:memoItem];
+        NSMutableArray<MemoItem *> * mutableDataBase = [NSMutableArray<MemoItem *> new];
+        for (MemoItem * item in self.dummyDataBase) {
+            if (item.uniqueId != memoItem.uniqueId) {
+                [mutableDataBase addObject:item];
+            }
+        }
+        [mutableDataBase addObject:memoItem];
+        self.dummyDataBase = mutableDataBase;
         return nil;
     } else {
         return FailedSaveContext;
