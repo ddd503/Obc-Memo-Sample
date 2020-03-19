@@ -165,6 +165,18 @@
                                                  editMemoDate:nil];
     [dataStore.dummyDataBase addObject:memoItem1];
 
+    MemoItemMock * memoItem2 = [[MemoItemMock alloc] initWith:dummyId2
+                                                    titleText:dummyId2
+                                                  contentText:dummyId2
+                                                 editMemoDate:nil];
+    [dataStore.dummyDataBase addObject:memoItem2];
+
+    MemoItemMock * memoItem3 = [[MemoItemMock alloc] initWith:dummyId3
+                                                    titleText:dummyId3
+                                                  contentText:dummyId3
+                                                 editMemoDate:nil];
+    [dataStore.dummyDataBase addObject:memoItem3];
+
     [repository readMemoItem:dummyId3 completion:^(MemoItem * _Nullable memoItem, NSInteger * _Nullable errorCode) {
         XCTAssertEqual(errorCode, nil);
         XCTAssertTrue([memoItem.uniqueId isEqualToString:dummyId3]);
