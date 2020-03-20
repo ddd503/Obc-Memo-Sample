@@ -27,6 +27,7 @@
 		45E22ADE2423CFE00010B1AF /* Memo.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E22ADD2423CFE00010B1AF /* Memo.m */; };
 		45E22AE22423D2A70010B1AF /* Translater.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E22AE12423D2A70010B1AF /* Translater.m */; };
 		45E22AE52423D7030010B1AF /* MemoListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E22AE42423D7030010B1AF /* MemoListPresenter.m */; };
+		45E22AEA2424CD5F0010B1AF /* MemoItemRepositoryMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E22AE92424CD5F0010B1AF /* MemoItemRepositoryMock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,8 @@
 		45E22AE32423D6FB0010B1AF /* MemoListPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoListPresenter.h; sourceTree = "<group>"; };
 		45E22AE42423D7030010B1AF /* MemoListPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoListPresenter.m; sourceTree = "<group>"; };
 		45E22AE7242475660010B1AF /* AlertEventType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertEventType.h; sourceTree = "<group>"; };
+		45E22AE82424CD570010B1AF /* MemoItemRepositoryMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoItemRepositoryMock.h; sourceTree = "<group>"; };
+		45E22AE92424CD5F0010B1AF /* MemoItemRepositoryMock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoItemRepositoryMock.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				45E22ADB24226A730010B1AF /* MemoItemRepositoryTest.m */,
+				45E22AE82424CD570010B1AF /* MemoItemRepositoryMock.h */,
+				45E22AE92424CD5F0010B1AF /* MemoItemRepositoryMock.m */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -452,6 +457,7 @@
 				45E22ADC24226A730010B1AF /* MemoItemRepositoryTest.m in Sources */,
 				45E22ADA242124F70010B1AF /* MemoItemMock.m in Sources */,
 				452C615924142F190032C7F4 /* MemoItemDataStoreTest.m in Sources */,
+				45E22AEA2424CD5F0010B1AF /* MemoItemRepositoryMock.m in Sources */,
 				45E22AD6242111380010B1AF /* MemoItemDataStoreMock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
