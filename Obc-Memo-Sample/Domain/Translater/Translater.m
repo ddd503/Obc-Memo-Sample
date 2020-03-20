@@ -18,7 +18,7 @@
     return memo;
 }
 
-+ (NSArray<Memo *> * _Nonnull)memoItemsToMemos:(NSArray<MemoItem *> * _Nonnull)memoItems {
++ (NSArray<Memo *> *)memoItemsToMemos:(NSArray<MemoItem *> *)memoItems {
     NSMutableArray<Memo *> * mutableMemos = [NSMutableArray<Memo *> new];
     for (MemoItem * item in memoItems) {
         Memo * _Nonnull memo = [[Memo alloc] initWith:item.uniqueId

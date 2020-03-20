@@ -26,6 +26,7 @@
 		45E22ADC24226A730010B1AF /* MemoItemRepositoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E22ADB24226A730010B1AF /* MemoItemRepositoryTest.m */; };
 		45E22ADE2423CFE00010B1AF /* Memo.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E22ADD2423CFE00010B1AF /* Memo.m */; };
 		45E22AE22423D2A70010B1AF /* Translater.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E22AE12423D2A70010B1AF /* Translater.m */; };
+		45E22AE52423D7030010B1AF /* MemoListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E22AE42423D7030010B1AF /* MemoListPresenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,9 @@
 		45E22ADF2423CFE70010B1AF /* Memo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Memo.h; sourceTree = "<group>"; };
 		45E22AE02423D29F0010B1AF /* Translater.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Translater.h; sourceTree = "<group>"; };
 		45E22AE12423D2A70010B1AF /* Translater.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Translater.m; sourceTree = "<group>"; };
+		45E22AE32423D6FB0010B1AF /* MemoListPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoListPresenter.h; sourceTree = "<group>"; };
+		45E22AE42423D7030010B1AF /* MemoListPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoListPresenter.m; sourceTree = "<group>"; };
+		45E22AE7242475660010B1AF /* AlertEventType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertEventType.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +212,8 @@
 		4570CBAE24114BF7005C6AEA /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				45E22AE32423D6FB0010B1AF /* MemoListPresenter.h */,
+				45E22AE42423D7030010B1AF /* MemoListPresenter.m */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -233,6 +239,7 @@
 		4570CBB124114CA4005C6AEA /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				45E22AE6242475460010B1AF /* Enum */,
 				4570CBB924114D27005C6AEA /* Translater */,
 				4570CBAD24114BF5005C6AEA /* ValueObject */,
 			);
@@ -311,6 +318,14 @@
 			children = (
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		45E22AE6242475460010B1AF /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				45E22AE7242475660010B1AF /* AlertEventType.h */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,6 +430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4570CBC42413718D005C6AEA /* MemoItem+CoreDataProperties.m in Sources */,
+				45E22AE52423D7030010B1AF /* MemoListPresenter.m in Sources */,
 				452C615C2415A45C0032C7F4 /* MemoItemRepository.m in Sources */,
 				4570CB962411443C005C6AEA /* main.m in Sources */,
 				4570CBC6241372B6005C6AEA /* CoreDataManager.m in Sources */,

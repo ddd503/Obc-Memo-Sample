@@ -12,6 +12,6 @@
 
 @interface MemoItemDataStoreMock : NSObject <MemoItemDataStore>
 @property (nonatomic) NSMutableArray<MemoItem *> * dummyDataBase;
-@property (nonatomic) Boolean isSuccessFunc;
-- (instancetype)initWith:(Boolean)isSuccessFunc;
+@property (nonatomic) BOOL isSuccessFunc;
+- (instancetype)initWith:(BOOL)isSuccessFunc;
 @end

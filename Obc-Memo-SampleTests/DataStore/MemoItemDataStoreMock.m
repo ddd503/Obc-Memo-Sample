@@ -11,7 +11,7 @@
 
 @implementation MemoItemDataStoreMock
 
-- (instancetype)initWith:(Boolean)isSuccessFunc {
+- (instancetype)initWith:(BOOL)isSuccessFunc {
     self = [super init];
     if (self) {
         self.dummyDataBase = [NSMutableArray<MemoItem *> new];
