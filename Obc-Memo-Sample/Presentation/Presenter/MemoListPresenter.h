@@ -39,4 +39,5 @@
 @interface MemoListPresenter : NSObject <MemoListPresenterInputs>
 @property (nonatomic, weak) NSObject<MemoListPresenterOutputs> * view;
 @property (nonatomic) NSObject<MemoItemRepository> * memoItemRepository;
+- (instancetype)initWith:(NSObject<MemoItemRepository> *)memoItemRepository;
 @end

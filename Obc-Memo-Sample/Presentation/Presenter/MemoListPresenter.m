@@ -55,6 +55,14 @@
     };
 }
 
+- (instancetype)initWith:(NSObject<MemoItemRepository> *)memoItemRepository {
+    self = [super init];
+    if (self) {
+        self.memoItemRepository = memoItemRepository;
+    }
+    return self;
+}
+
 - (void)bind:(NSObject<MemoListPresenterOutputs> *)view {
     self.view = view;
 }

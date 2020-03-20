@@ -28,6 +28,8 @@
 		45E22AE22423D2A70010B1AF /* Translater.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E22AE12423D2A70010B1AF /* Translater.m */; };
 		45E22AE52423D7030010B1AF /* MemoListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E22AE42423D7030010B1AF /* MemoListPresenter.m */; };
 		45E22AEA2424CD5F0010B1AF /* MemoItemRepositoryMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E22AE92424CD5F0010B1AF /* MemoItemRepositoryMock.m */; };
+		45E22AED2424DA630010B1AF /* MemoListPresenterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E22AEC2424DA630010B1AF /* MemoListPresenterTest.m */; };
+		45E22AF0242534420010B1AF /* MemoDetailPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E22AEF242534420010B1AF /* MemoDetailPresenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,9 @@
 		45E22AE7242475660010B1AF /* AlertEventType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertEventType.h; sourceTree = "<group>"; };
 		45E22AE82424CD570010B1AF /* MemoItemRepositoryMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoItemRepositoryMock.h; sourceTree = "<group>"; };
 		45E22AE92424CD5F0010B1AF /* MemoItemRepositoryMock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoItemRepositoryMock.m; sourceTree = "<group>"; };
+		45E22AEC2424DA630010B1AF /* MemoListPresenterTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoListPresenterTest.m; sourceTree = "<group>"; };
+		45E22AEE242534320010B1AF /* MemoDetailPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoDetailPresenter.h; sourceTree = "<group>"; };
+		45E22AEF242534420010B1AF /* MemoDetailPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoDetailPresenter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +173,7 @@
 		4570CB9E2411443C005C6AEA /* Obc-Memo-SampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				45E22AEB2424DA490010B1AF /* Presenter */,
 				452C615724142ECF0032C7F4 /* Repository */,
 				452C615624142ECC0032C7F4 /* DataStore */,
 				452C615524142EC90032C7F4 /* Entity */,
@@ -219,6 +225,8 @@
 			children = (
 				45E22AE32423D6FB0010B1AF /* MemoListPresenter.h */,
 				45E22AE42423D7030010B1AF /* MemoListPresenter.m */,
+				45E22AEE242534320010B1AF /* MemoDetailPresenter.h */,
+				45E22AEF242534420010B1AF /* MemoDetailPresenter.m */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -333,6 +341,14 @@
 			path = Enum;
 			sourceTree = "<group>";
 		};
+		45E22AEB2424DA490010B1AF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				45E22AEC2424DA630010B1AF /* MemoListPresenterTest.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -437,6 +453,7 @@
 				4570CBC42413718D005C6AEA /* MemoItem+CoreDataProperties.m in Sources */,
 				45E22AE52423D7030010B1AF /* MemoListPresenter.m in Sources */,
 				452C615C2415A45C0032C7F4 /* MemoItemRepository.m in Sources */,
+				45E22AF0242534420010B1AF /* MemoDetailPresenter.m in Sources */,
 				4570CB962411443C005C6AEA /* main.m in Sources */,
 				4570CBC6241372B6005C6AEA /* CoreDataManager.m in Sources */,
 				4570CB8824114439005C6AEA /* ViewController.m in Sources */,
@@ -454,6 +471,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45E22AED2424DA630010B1AF /* MemoListPresenterTest.m in Sources */,
 				45E22ADC24226A730010B1AF /* MemoItemRepositoryTest.m in Sources */,
 				45E22ADA242124F70010B1AF /* MemoItemMock.m in Sources */,
 				452C615924142F190032C7F4 /* MemoItemDataStoreTest.m in Sources */,
