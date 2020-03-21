@@ -13,31 +13,31 @@
 
 @protocol MemoListPresenterOutputs <NSObject>
 - (void)setupLayout;
-- (void)updateMemoList:(NSArray<Memo *> *)memos;
+- (void)updateMemoList:(NSArray<Memo *> * _Nonnull)memos;
 - (void)deselectRowIfNeeded;
 - (void)transitionCreateMemo;
-- (void)transitionDetailMemo:(Memo *)memo;
+- (void)transitionDetailMemo:(Memo * _Nullable)memo;
 - (void)updateTableViewIsEditing:(BOOL)isEditing;
-- (void)updateButtonTitle:(NSString *)title;
+- (void)updateButtonTitle:(NSString * _Nonnull)title;
 - (void)showAllDeleteActionSheet;
-- (void)showErrorAlert:(NSString *)message;
+- (void)showErrorAlert:(NSString *  _Nullable)message;
 @end
 
 @protocol MemoListPresenterInputs <NSObject>
-@property (nonatomic) NSMutableArray<Memo *> * memos;
+@property (nonatomic) NSMutableArray<Memo *> * _Nonnull memos;
 @property (nonatomic) BOOL tableViewEditing;
-@property (nonatomic) void (^tappedActionSheet)(AlertEventType);
-- (void)bind:(NSObject<MemoListPresenterOutputs> *)view;
+@property (nonatomic) void (^ _Nonnull tappedActionSheet)(AlertEventType);
+- (void)bind:(NSObject<MemoListPresenterOutputs> * _Nonnull)view;
 - (void)viewDidLoad;
 - (void)viewWillAppear;
 - (void)tappedUnderRightButton;
-- (void)deleteMemo:(NSString *)uniqueId;
-- (void)didSaveMemo:(NSNotification *)notification;
-- (void)didSelectItem:(NSIndexPath *)indexPath;
+- (void)deleteMemo:(NSString * _Nonnull)uniqueId;
+- (void)didSaveMemo:(NSNotification * _Nullable)notification;
+- (void)didSelectItem:(NSIndexPath * _Nullable)indexPath;
 @end
 
 @interface MemoListPresenter : NSObject <MemoListPresenterInputs>
-@property (nonatomic, weak) NSObject<MemoListPresenterOutputs> * view;
-@property (nonatomic) NSObject<MemoItemRepository> * memoItemRepository;
-- (instancetype)initWith:(NSObject<MemoItemRepository> *)memoItemRepository;
+@property (nonatomic, weak) NSObject<MemoListPresenterOutputs> * _Nullable view;
+@property (nonatomic) NSObject<MemoItemRepository> * _Nonnull memoItemRepository;
+- (instancetype _Nonnull)initWith:(NSObject<MemoItemRepository> * _Nonnull)memoItemRepository;
 @end

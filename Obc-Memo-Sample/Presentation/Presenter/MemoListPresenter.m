@@ -59,6 +59,10 @@
     self = [super init];
     if (self) {
         self.memoItemRepository = memoItemRepository;
+        [NSNotificationCenter.defaultCenter addObserver:self
+                                               selector:@selector(didSaveMemo:)
+                                                   name:NSManagedObjectContextDidSaveNotification
+                                                 object:nil];
     }
     return self;
 }
