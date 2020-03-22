@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MemoListViewController" customModule="Multiple_Module_Memo_Sample" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MemoListViewController" customModule="Obc_Memo_Sample" customModuleProvider="target">
             <connections>
                 <outlet property="countLabel" destination="oBA-sV-sC8" id="PLr-eX-1FN"/>
                 <outlet property="emptyLabel" destination="UJD-cS-iJh" id="b3P-EA-a2z"/>
@@ -42,7 +42,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <state key="normal" title="メモ追加"/>
                             <connections>
-                                <action selector="tappedUnderRightButtonWithSender:" destination="-1" eventType="touchUpInside" id="gOP-zU-KRZ"/>
+                                <action selector="tappedUnderRightButton:" destination="-1" eventType="touchUpInside" id="Y1H-LG-796"/>
                             </connections>
                         </button>
                     </subviews>

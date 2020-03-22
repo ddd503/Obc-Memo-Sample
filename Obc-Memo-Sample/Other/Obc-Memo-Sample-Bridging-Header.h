@@ -6,5 +6,5 @@
 //  Copyright © 2020 kawaharadai. All rights reserved.
 //
 
-#import "MemoListPresenter.h"
-#import "MemoDetailPresenter.h"
+#import "MemoListViewController.h"
+#import "MemoDetailViewController.h"

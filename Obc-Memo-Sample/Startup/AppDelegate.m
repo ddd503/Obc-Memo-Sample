@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MemoItemDataStore.h"
 #import "CoreDataManager.h"
+#import <Obc_Memo_Sample-Swift.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +18,12 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    UIWindow * window = [UIWindow new];
+    UIViewController * startupVC = [ViewControllerBuilder buildMemoListVC];
+    UINavigationController * navigationController = [[UINavigationController alloc] initWithRootViewController:startupVC];
+    window.rootViewController = navigationController;
+    self.window = window;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
