@@ -20,15 +20,6 @@
 
 @implementation MemoListViewController
 
-// MARK: - Propaties
-
-- (void)setTableView:(UITableView *)tableView {
-    tableView.dataSource = self;
-    tableView.delegate = self;
-    [tableView registerNib:[MemoInfoCell nib] forCellReuseIdentifier:[MemoInfoCell identifier]];
-    tableView.tableFooterView = [UIView new];
-}
-
 // MARK: - Inputs
 
 - (instancetype)init {
@@ -90,6 +81,10 @@
 - (void)setupLayout {
     self.title = @"メモ";
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    [self.tableView registerNib:[MemoInfoCell nib] forCellReuseIdentifier:[MemoInfoCell identifier]];
+    self.tableView.tableFooterView = [UIView new];
 }
 
 - (void)showAllDeleteActionSheet {

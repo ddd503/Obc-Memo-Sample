@@ -16,12 +16,6 @@
 
 @implementation MemoDetailViewController
 
-// MARK: - Propaties
-
-- (void)setTextView:(UITextView *)textView {
-    textView.delegate = self;
-}
-
 // MARK: - Inputs
 
 - (instancetype)init {
@@ -72,6 +66,7 @@
                                                                         target:self
                                                                         action:@selector(tappedDoneButton:)];
     self.navigationItem.rightBarButtonItem = self.doneButtonItem;
+    self.textView.delegate = self;
     [self.textView becomeFirstResponder];
 }
 
