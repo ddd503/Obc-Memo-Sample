@@ -45,97 +45,6 @@
 
 // MARK: 実行結果の評価
 
-- (void)deselectRowIfNeeded {
-    NSString * string = self.expectation.description;
-    SWITCH(string) {
-        CASE(@"") {
-            [self.expectation fulfill];
-        }
-        DEFAULT {
-            XCTFail();
-            break;
-        }
-    }
-}
-
-- (void)setupLayout {
-    NSString * string = self.expectation.description;
-    SWITCH(string) {
-        CASE(@"") {
-            [self.expectation fulfill];
-        }
-        DEFAULT {
-            XCTFail();
-            break;
-        }
-    }
-}
-
-- (void)showAllDeleteActionSheet {
-    NSString * string = self.expectation.description;
-    SWITCH(string) {
-        CASE(@"") {
-            [self.expectation fulfill];
-        }
-        DEFAULT {
-            XCTFail();
-            break;
-        }
-    }
-}
-
-- (void)showErrorAlert:(NSString *)message {
-    NSString * string = self.expectation.description;
-    SWITCH(string) {
-        CASE(@"") {
-            [self.expectation fulfill];
-        }
-        DEFAULT {
-            XCTFail();
-            break;
-        }
-    }
-}
-
-- (void)transitionCreateMemo {
-    NSString * string = self.expectation.description;
-    SWITCH(string) {
-        CASE(@"") {
-            [self.expectation fulfill];
-        }
-        DEFAULT {
-            XCTFail();
-            break;
-        }
-    }
-}
-
-- (void)transitionDetailMemo:(Memo *)memo {
-    NSString * string = self.expectation.description;
-    SWITCH(string) {
-        CASE(@"") {
-            [self.expectation fulfill];
-        }
-        DEFAULT {
-            XCTFail();
-            break;
-        }
-    }
-}
-
-- (void)updateButtonTitle:(NSString *)title {
-    NSString * string = self.expectation.description;
-    SWITCH(string) {
-        CASE(@"") {
-            [self.expectation fulfill];
-        }
-        DEFAULT {
-            XCTFail();
-            break;
-        }
-    }
-}
-
 - (void)updateMemoList:(NSArray<Memo *> *)memos {
     NSString * string = self.expectation.description;
     SWITCH(string) {
@@ -149,19 +58,6 @@
             break;
         }
     }
-}
-
-- (void)updateTableViewIsEditing:(BOOL)isEditing {
-    NSString * string = self.expectation.description;
-       SWITCH(string) {
-           CASE(@"") {
-               [self.expectation fulfill];
-           }
-           DEFAULT {
-               XCTFail();
-               break;
-           }
-       }
 }
 
 @end
