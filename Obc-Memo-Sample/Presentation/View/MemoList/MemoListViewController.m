@@ -8,6 +8,7 @@
 
 #import "MemoListViewController.h"
 #import "MemoInfoCell.h"
+#import <Obc_Memo_Sample-Swift.h>
 
 @interface MemoListViewController () <UITableViewDataSource, UITableViewDelegate, MemoListPresenterOutputs>
 @property (nonatomic, weak) IBOutlet UIButton * underRightButton;
@@ -35,7 +36,6 @@
 }
 
 - (instancetype)initWith:(NSObject<MemoListPresenterInputs> *)presenterInputs {
-//    self = [super init];
     self = [super initWithNibName:@"MemoListViewController" bundle:NSBundle.mainBundle];
     if (self) {
         self.presenterInputs = presenterInputs;
@@ -58,9 +58,8 @@
     [self.presenterInputs viewWillAppear];
 }
 
-- (void)setEditing:(BOOL)editing animated:(BOOL)animated {}
-- (void)setEditing:(BOOL)editing {
-    [super setEditing:editing];
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
+    [super setEditing:editing animated:animated];
     self.presenterInputs.tableViewEditing = editing;
 }
 
@@ -82,39 +81,68 @@
 // MARK: - Outputs
 
 - (void)deselectRowIfNeeded {
-
+    __weak typeof(self) wself = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [wself.tableView deselectRowAtIndexPath:wself.tableView.indexPathForSelectedRow animated:YES];
+    });
 }
 
 - (void)setupLayout {
-
+    self.title = @"メモ";
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)showAllDeleteActionSheet {
-
+    __weak typeof(self) wself = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [wself showAllDeleteActionSheetWithTitle:nil message:nil handler:wself.presenterInputs.tappedActionSheet];
+    });
 }
 
 - (void)showErrorAlert:(NSString * _Nullable)message {
-
+    __weak typeof(self) wself = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [wself showErrorAlert:message];
+    });
 }
 
 - (void)transitionCreateMemo {
-
+    __weak typeof(self) wself = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [wself.navigationController pushViewController:[ViewControllerBuilder buildMemoDetailVCWithMemo:nil] animated:YES];
+    });
 }
 
 - (void)transitionDetailMemo:(Memo * _Nullable)memo {
-
+    __weak typeof(self) wself = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [wself.navigationController pushViewController:[ViewControllerBuilder buildMemoDetailVCWithMemo:memo] animated:YES];
+    });
 }
 
 - (void)updateButtonTitle:(NSString * _Nonnull)title {
-
+    __weak typeof(self) wself = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [wself.underRightButton setTitle:title forState:UIControlStateNormal];
+    });
 }
 
 - (void)updateMemoList:(NSArray<Memo *> * _Nonnull)memos {
-
+    __weak typeof(self) wself = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [wself.tableView reloadData];
+        wself.countLabel.text = (memos.count > 0) ? [NSString stringWithFormat:@"%ld件のメモ", (long)memos.count] : @"メモなし";
+        if (memos.count <= 0) {
+            [wself setEditing:NO animated:YES];
+        }
+    });
 }
 
 - (void)updateTableViewIsEditing:(BOOL)isEditing {
-    
+    __weak typeof(self) wself = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [wself.tableView setEditing:isEditing];
+    });
 }
 
 @end

@@ -19,13 +19,11 @@
 
 - (void)setMemos:(NSMutableArray<Memo *> *)memos {
     [self.view updateMemoList:memos];
-    self.memos = memos;
 }
 
 - (void)setTableViewEditing:(BOOL)tableViewEditing {
     [self.view updateTableViewIsEditing:tableViewEditing];
     [self.view updateButtonTitle:tableViewEditing ? @"全て削除" : @"メモ追加"];
-    self.tableViewEditing = tableViewEditing;
 }
 
 - (void)setTappedActionSheet:(void (^)(AlertEventType))tappedActionSheet {

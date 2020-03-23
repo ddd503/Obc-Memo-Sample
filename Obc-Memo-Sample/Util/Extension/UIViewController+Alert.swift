@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIViewController {
-    func showAllDeleteActionSheet(title: String? = nil, message: String? = nil, handler: @escaping (AlertEventType) -> ()) {
+    @objc func showAllDeleteActionSheet(title: String? = nil, message: String? = nil, handler: @escaping (AlertEventType) -> ()) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         let allDelete = UIAlertAction(title: "すべて削除", style: .destructive) { (_) in
             handler(.AllDelete)
@@ -21,8 +21,8 @@ extension UIViewController {
         alert.addAction(cancel)
         self.present(alert, animated: true)
     }
-
-    func showNormalErrorAlert(message: String? = nil) {
+    
+    @objc func showNormalErrorAlert(message: String? = nil) {
         let message = message ?? "一時的な不具合が発生しました。\n一定時間待ってからお試しください。"
         let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         let close = UIAlertAction(title: "とじる", style: .default, handler: nil)
