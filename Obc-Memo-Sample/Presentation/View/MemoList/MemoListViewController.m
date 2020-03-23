@@ -69,7 +69,7 @@
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView
                  cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    MemoInfoCell * cell = [tableView dequeueReusableCellWithIdentifier:[MemoInfoCell identifier]];
+    MemoInfoCell * cell = [tableView dequeueReusableCellWithIdentifier:[MemoInfoCell identifier] forIndexPath:indexPath];
     [cell setInfo:self.presenterInputs.memos[indexPath.row]];
     return cell;
 }
@@ -132,6 +132,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [wself.tableView reloadData];
         wself.countLabel.text = (memos.count > 0) ? [NSString stringWithFormat:@"%ld件のメモ", (long)memos.count] : @"メモなし";
+        [wself.emptyLabel setHidden:!(memos.count <= 0)];
         if (memos.count <= 0) {
             [wself setEditing:NO animated:YES];
         }

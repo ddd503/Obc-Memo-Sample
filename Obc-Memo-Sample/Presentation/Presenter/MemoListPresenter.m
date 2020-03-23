@@ -13,11 +13,16 @@
 
 @implementation MemoListPresenter
 
-@synthesize memos;
+@synthesize memosImpl;
 @synthesize tableViewEditing;
 @synthesize tappedActionSheet;
 
+- (NSMutableArray<Memo *> *)memos {
+    return self.memosImpl;
+}
+
 - (void)setMemos:(NSMutableArray<Memo *> *)memos {
+    self.memosImpl = memos;
     [self.view updateMemoList:memos];
 }
 

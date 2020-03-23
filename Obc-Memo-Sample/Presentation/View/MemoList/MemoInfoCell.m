@@ -2,7 +2,7 @@
 //  MemoInfoCell.m
 //  Obc-Memo-Sample
 //
-//  Created by kawaharadai on 2020/03/22.
+//  Created by kawaharadai on 2020/03/23.
 //  Copyright © 2020 kawaharadai. All rights reserved.
 //
 
@@ -17,21 +17,22 @@
 @implementation MemoInfoCell
 
 + (NSString *)identifier {
+    NSLog(@"%@", [NSString stringWithFormat:@"%@", self]);
     return [NSString stringWithFormat:@"%@", self];
 }
 
 + (UINib *)nib {
-    return [UINib nibWithNibName:[self identifier] bundle:[NSBundle mainBundle]];
+    return [UINib nibWithNibName:[self identifier] bundle:nil];
 }
 
-- (void)setInfo:(Memo * _Nonnull)memo {
+- (void)setInfo:(Memo *)memo {
     self.titleLabel.text = memo.title;
     self.contentLabel.text = memo.content;
     if (memo.editDate != nil) {
-        NSDateFormatter * dateFormatter = [NSDateFormatter new];
-        dateFormatter.calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-        dateFormatter.dateFormat = @"yyyy/MM/dd  HH:mm";
-        self.dateLabel.text = [dateFormatter stringFromDate:memo.editDate];
+        NSDateFormatter * formatter = [NSDateFormatter new];
+        formatter.calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+        formatter.dateFormat = @"yyyy/MM/dd  HH:mm";
+        self.dateLabel.text = [formatter stringFromDate:memo.editDate];
     }
 }
 

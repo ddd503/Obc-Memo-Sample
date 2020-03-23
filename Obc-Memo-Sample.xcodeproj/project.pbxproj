@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4509A7772427317000C26BFE /* MemoInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4509A7752427317000C26BFE /* MemoInfoCell.m */; };
-		4509A7782427317000C26BFE /* MemoInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4509A7762427317000C26BFE /* MemoInfoCell.xib */; };
 		4509A77C2427350F00C26BFE /* MemoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4509A77A2427350F00C26BFE /* MemoListViewController.m */; };
 		4509A77D2427350F00C26BFE /* MemoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4509A77B2427350F00C26BFE /* MemoListViewController.xib */; };
 		4509A7812427769A00C26BFE /* MemoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4509A77F2427769A00C26BFE /* MemoDetailViewController.m */; };
 		4509A7822427769A00C26BFE /* MemoDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4509A7802427769A00C26BFE /* MemoDetailViewController.xib */; };
+		4509A7902428992A00C26BFE /* MemoInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4509A78E2428992A00C26BFE /* MemoInfoCell.m */; };
+		4509A7912428992A00C26BFE /* MemoInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4509A78F2428992A00C26BFE /* MemoInfoCell.xib */; };
 		452C615924142F190032C7F4 /* MemoItemDataStoreTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 452C615824142F190032C7F4 /* MemoItemDataStoreTest.m */; };
 		452C615C2415A45C0032C7F4 /* MemoItemRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 452C615B2415A45C0032C7F4 /* MemoItemRepository.m */; };
 		452C617E241FC1F90032C7F4 /* NSString+.m in Sources */ = {isa = PBXBuildFile; fileRef = 452C617D241FC1F90032C7F4 /* NSString+.m */; };
@@ -49,15 +49,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4509A7742427317000C26BFE /* MemoInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoInfoCell.h; sourceTree = "<group>"; };
-		4509A7752427317000C26BFE /* MemoInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoInfoCell.m; sourceTree = "<group>"; };
-		4509A7762427317000C26BFE /* MemoInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemoInfoCell.xib; sourceTree = "<group>"; };
 		4509A7792427350F00C26BFE /* MemoListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoListViewController.h; sourceTree = "<group>"; };
 		4509A77A2427350F00C26BFE /* MemoListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoListViewController.m; sourceTree = "<group>"; };
 		4509A77B2427350F00C26BFE /* MemoListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemoListViewController.xib; sourceTree = "<group>"; };
 		4509A77E2427769A00C26BFE /* MemoDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoDetailViewController.h; sourceTree = "<group>"; };
 		4509A77F2427769A00C26BFE /* MemoDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoDetailViewController.m; sourceTree = "<group>"; };
 		4509A7802427769A00C26BFE /* MemoDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemoDetailViewController.xib; sourceTree = "<group>"; };
+		4509A78D2428992A00C26BFE /* MemoInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoInfoCell.h; sourceTree = "<group>"; };
+		4509A78E2428992A00C26BFE /* MemoInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoInfoCell.m; sourceTree = "<group>"; };
+		4509A78F2428992A00C26BFE /* MemoInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemoInfoCell.xib; sourceTree = "<group>"; };
 		452C615824142F190032C7F4 /* MemoItemDataStoreTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoItemDataStoreTest.m; sourceTree = "<group>"; };
 		452C615A2415A4540032C7F4 /* MemoItemRepository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoItemRepository.h; sourceTree = "<group>"; };
 		452C615B2415A45C0032C7F4 /* MemoItemRepository.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoItemRepository.m; sourceTree = "<group>"; };
@@ -387,12 +387,12 @@
 		45E22AFA242542730010B1AF /* MemoList */ = {
 			isa = PBXGroup;
 			children = (
-				4509A7742427317000C26BFE /* MemoInfoCell.h */,
-				4509A7752427317000C26BFE /* MemoInfoCell.m */,
-				4509A7762427317000C26BFE /* MemoInfoCell.xib */,
 				4509A7792427350F00C26BFE /* MemoListViewController.h */,
 				4509A77A2427350F00C26BFE /* MemoListViewController.m */,
 				4509A77B2427350F00C26BFE /* MemoListViewController.xib */,
+				4509A78D2428992A00C26BFE /* MemoInfoCell.h */,
+				4509A78E2428992A00C26BFE /* MemoInfoCell.m */,
+				4509A78F2428992A00C26BFE /* MemoInfoCell.xib */,
 			);
 			path = MemoList;
 			sourceTree = "<group>";
@@ -480,8 +480,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4509A77D2427350F00C26BFE /* MemoListViewController.xib in Resources */,
-				4509A7782427317000C26BFE /* MemoInfoCell.xib in Resources */,
 				4509A7822427769A00C26BFE /* MemoDetailViewController.xib in Resources */,
+				4509A7912428992A00C26BFE /* MemoInfoCell.xib in Resources */,
 				4570CB932411443C005C6AEA /* LaunchScreen.storyboard in Resources */,
 				4570CB902411443C005C6AEA /* Assets.xcassets in Resources */,
 			);
@@ -504,7 +504,6 @@
 				456BD83C242709D3003D6452 /* ViewControllerBuilder.swift in Sources */,
 				4570CBC42413718D005C6AEA /* MemoItem+CoreDataProperties.m in Sources */,
 				45E22AE52423D7030010B1AF /* MemoListPresenter.m in Sources */,
-				4509A7772427317000C26BFE /* MemoInfoCell.m in Sources */,
 				452C615C2415A45C0032C7F4 /* MemoItemRepository.m in Sources */,
 				45E22AF0242534420010B1AF /* MemoDetailPresenter.m in Sources */,
 				4570CB962411443C005C6AEA /* main.m in Sources */,
@@ -515,6 +514,7 @@
 				4509A7812427769A00C26BFE /* MemoDetailViewController.m in Sources */,
 				4570CBC32413718D005C6AEA /* MemoItem+CoreDataClass.m in Sources */,
 				45E22AE22423D2A70010B1AF /* Translater.m in Sources */,
+				4509A7902428992A00C26BFE /* MemoInfoCell.m in Sources */,
 				4570CB8224114439005C6AEA /* AppDelegate.m in Sources */,
 				4570CB8E24114439005C6AEA /* Obc_Memo_Sample.xcdatamodeld in Sources */,
 				4570CBCA2413B45F005C6AEA /* MemoItemDataStore.m in Sources */,
