@@ -24,23 +24,23 @@
 // MARK: テスト実行
 
 - (void)test_memos_メモリスト更新時に適切なOutputが走るか {
-//    self.expectation = [self expectationWithDescription:@"メモリスト更新時に適切なOutputが走るか"];
-//    MemoItemRepositoryMock * repository = [[MemoItemRepositoryMock alloc] initWith:YES];
-//    MemoListPresenter * presenter = [[MemoListPresenter alloc] initWith:repository];
-//    [presenter bind:self];
-//
-//    NSMutableArray<Memo *> * mutableArray = [NSMutableArray<Memo *> new];
-//    for(int i=0; i<20; i++){
-//        Memo * memo = [[Memo alloc] initWith:[NSString stringWithFormat:@"%ld", (long)i]
-//                                       title:[NSString stringWithFormat:@"%ld", (long)i]
-//                                     content:[NSString stringWithFormat:@"%ld", (long)i]
-//                                    editDate:nil];
-//        [mutableArray addObject:memo];
-//    }
-//
-//    presenter.memos = mutableArray;
-//
-//    [self waitForExpectations:[[NSArray alloc] initWithObjects:self.expectation, nil] timeout:3.0];
+    self.expectation = [self expectationWithDescription:@"メモリスト更新時に適切なOutputが走るか"];
+    MemoItemRepositoryMock * repository = [[MemoItemRepositoryMock alloc] initWith:YES];
+    MemoListPresenter * presenter = [[MemoListPresenter alloc] initWith:repository];
+    [presenter bind:self];
+
+    NSMutableArray<Memo *> * mutableArray = [NSMutableArray<Memo *> new];
+    for(int i=0; i<20; i++){
+        Memo * memo = [[Memo alloc] initWith:[NSString stringWithFormat:@"%ld", (long)i]
+                                       title:[NSString stringWithFormat:@"%ld", (long)i]
+                                     content:[NSString stringWithFormat:@"%ld", (long)i]
+                                    editDate:nil];
+        [mutableArray addObject:memo];
+    }
+
+    presenter.memos = mutableArray;
+
+    [self waitForExpectations:[[NSArray alloc] initWithObjects:self.expectation, nil] timeout:3.0];
 }
 
 // MARK: 実行結果の評価

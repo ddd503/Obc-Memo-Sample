@@ -7,6 +7,7 @@
 //
 
 #import "MemoDetailViewController.h"
+#import <Obc_Memo_Sample-Swift.h>
 
 @interface MemoDetailViewController () <UITextViewDelegate, MemoDetailPresenterOutputs>
 @property (weak, nonatomic) IBOutlet UITextView * textView;
@@ -82,7 +83,7 @@
 - (void)showErrorAlert:(NSString * _Nullable)message {
     __weak typeof(self) wself = self;
     dispatch_async(dispatch_get_main_queue(), ^{
-        [wself showErrorAlert:message];
+        [wself showNormalErrorAlertWithMessage:message];
     });
 }
 

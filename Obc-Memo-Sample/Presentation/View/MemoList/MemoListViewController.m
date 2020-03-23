@@ -113,7 +113,7 @@
 - (void)showErrorAlert:(NSString * _Nullable)message {
     __weak typeof(self) wself = self;
     dispatch_async(dispatch_get_main_queue(), ^{
-        [wself showErrorAlert:message];
+        [wself showNormalErrorAlertWithMessage:message];
     });
 }
 

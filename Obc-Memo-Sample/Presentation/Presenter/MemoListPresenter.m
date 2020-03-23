@@ -47,11 +47,11 @@
                             if (errorCode == nil) {
                                 wself.memos = [Translater memoItemsToMemos:memoItems];
                             } else {
-                                [wself.view showErrorAlert:[NSString stringWithFormat:@"%ld", (long)errorCode]];
+                                [wself.view showErrorAlert:[NSString stringWithFormat:@"エラー：code%ld", (long)errorCode]];
                             }
                         }];
                     } else {
-                        [wself.view showErrorAlert:[NSString stringWithFormat:@"%ld", (long)errorCode]];
+                        [wself.view showErrorAlert:[NSString stringWithFormat:@"エラー：code%ld", (long)errorCode]];
                     }
                 }];
             }
@@ -92,11 +92,11 @@
                 if (errorCode == nil) {
                     wself.memos = [Translater memoItemsToMemos:memoItems];
                 } else {
-                    [wself.view showErrorAlert:[NSString stringWithFormat:@"%ld", (long)errorCode]];
+                    [wself.view showErrorAlert:[NSString stringWithFormat:@"エラー：codeld", (long)errorCode]];
                 }
             }];
         } else {
-            [wself.view showErrorAlert:[NSString stringWithFormat:@"%ld", (long)errorCode]];
+            [wself.view showErrorAlert:[NSString stringWithFormat:@"エラー：code%ld", (long)errorCode]];
         }
     }];
 }
@@ -129,7 +129,7 @@
         if (errorCode == nil) {
             wself.memos = [Translater memoItemsToMemos:memoItems];
         } else {
-            [wself.view showErrorAlert:[NSString stringWithFormat:@"%ld", (long)errorCode]];
+            [wself.view showErrorAlert:[NSString stringWithFormat:@"エラー：code%ld", (long)errorCode]];
         }
     }];
 }
