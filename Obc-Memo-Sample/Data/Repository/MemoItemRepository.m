@@ -92,7 +92,7 @@
 
 
 - (void)readAllMemoItems:(void (^ _Nonnull)(NSArray<MemoItem *> * _Nullable, NSInteger * _Nullable))completion {
-    bool ascending = NO;
+    BOOL ascending = NO;
     [self.memoItemDataStore fetchArray:[[NSCompoundPredicate alloc] initWithType:NSAndPredicateType
                                                                    subpredicates:[NSArray<NSPredicate *> new]]
                                sortKey:@"editDate"
