@@ -17,7 +17,6 @@
 @implementation MemoInfoCell
 
 + (NSString *)identifier {
-    NSLog(@"%@", [NSString stringWithFormat:@"%@", self]);
     return [NSString stringWithFormat:@"%@", self];
 }
 

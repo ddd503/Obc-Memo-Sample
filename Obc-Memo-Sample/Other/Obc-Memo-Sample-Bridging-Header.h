@@ -8,3 +8,4 @@
 
 #import "MemoListViewController.h"
 #import "MemoDetailViewController.h"
+#import "AlertEventType.h"

@@ -69,6 +69,22 @@
     return self.presenterInputs.memos.count;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.presenterInputs didSelectItem:indexPath];
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (editingStyle) {
+        case UITableViewCellEditingStyleDelete: {
+            NSString * uniqueId = self.presenterInputs.memos[indexPath.row].uniqueId;
+            [self.presenterInputs deleteMemo:uniqueId];
+        }
+            break;
+        default:
+            break;
+    }
+}
+
 // MARK: - Outputs
 
 - (void)deselectRowIfNeeded {
@@ -90,7 +106,7 @@
 - (void)showAllDeleteActionSheet {
     __weak typeof(self) wself = self;
     dispatch_async(dispatch_get_main_queue(), ^{
-        [wself showAllDeleteActionSheetWithTitle:nil message:nil handler:wself.presenterInputs.tappedActionSheet];
+        [wself showAllDeleteActionSheetWithTitle:nil message:nil handler:self.presenterInputs.tappedActionSheet];
     });
 }
 

@@ -26,14 +26,19 @@
     [self.view updateMemoList:memos];
 }
 
+- (BOOL)tableViewEditing {
+    return self.tableViewEditingImpl;
+}
+
 - (void)setTableViewEditing:(BOOL)tableViewEditing {
+    self.tableViewEditingImpl = tableViewEditing;
     [self.view updateTableViewIsEditing:tableViewEditing];
     [self.view updateButtonTitle:tableViewEditing ? @"全て削除" : @"メモ追加"];
 }
 
-- (void)setTappedActionSheet:(void (^)(AlertEventType))tappedActionSheet {
+- (void (^)(AlertEventType))tappedActionSheet {
     __weak typeof(self) wself = self;
-    self.tappedActionSheet = ^(AlertEventType type) {
+    self.tappedActionSheetImpl = ^(AlertEventType type) {
         switch (type) {
             case AllDelete: {
                 [wself.memoItemRepository deleteAllMemoItems:@"MemoItem" completion:^(void * _Nullable (_)(void), NSInteger * _Nullable errorCode) {
@@ -56,6 +61,11 @@
                 break;
         };
     };
+    return self.tappedActionSheetImpl;
+}
+
+- (void)setTappedActionSheet:(void (^)(AlertEventType))tappedActionSheet {
+    self.tappedActionSheetImpl = tappedActionSheet;
 }
 
 - (instancetype)initWith:(NSObject<MemoItemRepository> *)memoItemRepository {
