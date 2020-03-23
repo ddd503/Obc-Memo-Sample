@@ -2,14 +2,14 @@
 //  MemoDetailViewController.m
 //  Obc-Memo-Sample
 //
-//  Created by kawaharadai on 2020/03/22.
+//  Created by kawaharadai on 2020/03/23.
 //  Copyright © 2020 kawaharadai. All rights reserved.
 //
 
 #import "MemoDetailViewController.h"
 
 @interface MemoDetailViewController () <UITextViewDelegate, MemoDetailPresenterOutputs>
-@property (nonatomic, weak) IBOutlet UITextView * textView;
+@property (weak, nonatomic) IBOutlet UITextView * textView;
 @property (nonatomic) UIBarButtonItem * doneButtonItem;
 @property (nonatomic) NSObject<MemoDetailPresenterInputs> * presenterInputs;
 @end

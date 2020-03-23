@@ -7,9 +7,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MemoDetailViewController" customModule="Multiple_Module_Memo_Sample" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MemoDetailViewController">
             <connections>
-                <outlet property="textView" destination="uw4-cO-A06" id="cw5-kv-fZz"/>
+                <outlet property="textView" destination="AAj-ip-Ftt" id="uI6-5b-LSa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,7 +18,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uw4-cO-A06">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AAj-ip-Ftt">
                     <rect key="frame" x="15" y="44" width="384" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -28,13 +28,13 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="uw4-cO-A06" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="3lc-Cj-2ny"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uw4-cO-A06" secondAttribute="bottom" id="7IH-tY-BiI"/>
-                <constraint firstItem="uw4-cO-A06" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ZBT-7V-hTm"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uw4-cO-A06" secondAttribute="trailing" constant="15" id="tfk-We-pw4"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="AAj-ip-Ftt" secondAttribute="bottom" id="Dxz-Wl-Saa"/>
+                <constraint firstItem="AAj-ip-Ftt" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="OmO-Bs-rTl"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="AAj-ip-Ftt" secondAttribute="trailing" constant="15" id="xO9-oa-wqq"/>
+                <constraint firstItem="AAj-ip-Ftt" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="yYV-o0-rxz"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="145"/>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="136" y="105"/>
         </view>
     </objects>
 </document>

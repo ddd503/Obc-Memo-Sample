@@ -29,7 +29,8 @@
 }
 
 - (void)didChangeTextView:(NSString * _Nonnull)text {
-    [self.view updateDoneButtonState:!([text isEqualToString:@""])];
+    BOOL isEmptyText = [text isEqualToString:@""] || (text == nil);
+    [self.view updateDoneButtonState:!(isEmptyText)];
 }
 
 - (void)didSaveMemo:(NSNotification * _Nonnull)notification {
